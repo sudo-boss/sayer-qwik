@@ -6,7 +6,8 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 
-import "./global.css";
+import "./global.scss";
+import styles from './styleMLG.module.scss';
 
 export default component$(() => {
   /**
@@ -26,6 +27,7 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
+        <div class={styles.styleMLG}>test</div>
       </body>
     </QwikCityProvider>
   );
