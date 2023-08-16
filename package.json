@@ -2,7 +2,7 @@
   "name": "my-qwik-empty-starter",
   "description": "App with Routing built-in ready to create your app",
   "engines": {
-    "node": ">=15.0.0"
+    "node": ">=18.0.0"
   },
   "private": true,
   "scripts": {
@@ -18,7 +18,9 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "_3": "-----------------------------CUSTOM------------------------------------------",
+    "generate-comp": "npx plop --plopfile generators/plopfile.js"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.2.7",
@@ -31,6 +33,7 @@
     "cssnano": "6.0.1",
     "eslint": "8.45.0",
     "eslint-plugin-qwik": "1.2.7",
+    "plop": "3.1.2",
     "postcss": "8.4.23",
     "postcss-preset-env": "8.5.1",
     "prettier": "2.8.8",
