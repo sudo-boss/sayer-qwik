@@ -20,7 +20,8 @@
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
     "_3": "-----------------------------CUSTOM------------------------------------------",
-    "generate-comp": "npx plop --plopfile generators/plopfile.js"
+    "generate-comp": "npx plop --plopfile generators/plopfile.js",
+    "generate-hook": "npx plop --plopfile generators/plopfile-hook.js"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.2.7",
