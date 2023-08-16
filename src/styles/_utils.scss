@@ -1,0 +1,26 @@
+@import 'variables';
+
+/** Limita el número de lineas con una elipse $lines es el número de lineas a limitar */
+@mixin limitTextLines($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/** Limita el ancho máximo de un texto con una elipse */
+@mixin limitTextWidth($max-width) {
+  max-width: $max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin contetHeightDesktop() {
+  min-height: calc(100vh - ($headerHeight + $footerHeight));
+}
+
+@mixin contetHeightMobile() {
+  min-height: calc(100vh - ($headerHeight + $footerHeightMobile));
+}

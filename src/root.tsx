@@ -4,10 +4,9 @@ import {
   RouterOutlet,
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city";
-import { RouterHead } from "./components/router-head/router-head";
+import { RouterHead } from "src/common/router-head";
 
-import "./global.scss";
-import styles from './styleMLG.module.scss';
+import "src/styles/_index.scss";
 
 export default component$(() => {
   /**
@@ -27,7 +26,6 @@ export default component$(() => {
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
-        <div class={styles.styleMLG}>test</div>
       </body>
     </QwikCityProvider>
   );

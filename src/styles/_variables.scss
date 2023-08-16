@@ -1,0 +1,88 @@
+//----------------------Main Colors------------------
+//----------------------Primary
+$colorPrimary1: #ff9bdb;
+$colorPrimary2: #fa65e8;
+$colorPrimary3: #de39cb;
+$colorPrimary4: #c221af;
+$colorPrimary5: #8d1c84;
+$colorPrimary6: #8d1c84;
+$colorPrimary7: #661360;
+// ---Default
+$colorPrimary: $colorPrimary4;
+
+//----------------------Secondary
+$colorSecondary1: #7dfff0;
+$colorSecondary2: #00ffe0;
+$colorSecondary3: #06c3ad;
+$colorSecondary4: #0a9989;
+$colorSecondary5: #077c6e;
+$colorSecondary6: #045f53;
+$colorSecondary7: #013d33;
+// ---Default
+$colorSecondary: #0a9989;
+
+//----------------------Three
+$colorThree1: #bd80fa;
+$colorThree2: #ae70fe;
+$colorThree3: #9843fa;
+$colorThree4: #8026aa;
+$colorThree5: #6c0fa2;
+$colorThree6: #4f0979;
+$colorThree7: #2c043c;
+// ---Default
+$colorThree: #8824fa;
+
+//----------------------Four
+$colorFour1: #b1bbf6;
+$colorFour2: #9aa1ea;
+$colorFour3: #7f87de;
+$colorFour4: #4764fb;
+$colorFour5: #2e3d8f;
+$colorFour6: #1c266f;
+$colorFour7: #000d54;
+// ---Default
+$colorFour: $colorFour4;
+
+//----------------------Mexican Pink
+$colorMexPink0: #ffb5da;
+$colorMexPink1: #ff7fbf;
+$colorMexPink2: #ff5ca6;
+$colorMexPink3: #ff3c8c;
+$colorMexPink4: #ff0099;
+$colorMexPink5: #e6008c;
+$colorMexPink6: #bf0073;
+$colorMexPink7: #99004d;
+// ---Default
+$colorMexPink: $colorMexPink4;
+
+//----------------------Dark
+$colorDark1: #717171;
+$colorDark2: #5e5e5e;
+$colorDark3: #555555;
+$colorDark4: #474747;
+$colorDark5: #303030;
+$colorDark6: #1d1d1d;
+$colorDark7: #000000;
+// ---Default
+$colorDark: $colorDark5;
+
+//----------------------Light
+$colorLight1: #ffffff;
+$colorLight2: #e9e9e9;
+$colorLight3: #dbdbdb;
+$colorLight4: #cacaca;
+$colorLight5: #bababa;
+$colorLight6: #b0b0b0;
+$colorLight7: #a5a5a5;
+// ---Default
+$colorLight: $colorLight1;
+
+//----------------------Specials------------------
+$colorSuccess: #3ab415;
+$colorWarning: #f1df17;
+$colorError: #ff4d4f;
+
+//----------------------Sizes------------------
+$headerHeight: 64px;
+$footerHeight: 280px;
+$footerHeightMobile: 330px;

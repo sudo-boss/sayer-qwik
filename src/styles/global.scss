@@ -1,0 +1,103 @@
+@import 'animations';
+@import 'variables';
+
+// ----------------------------------Layout------------------------------------
+//-----------------GlobalLayout
+.GlobalLayout {
+  &-dark {
+    .ant-layout {
+      background-color: $colorDark5;
+      color: $colorLight;
+    }
+  }
+  &-light {
+    .ant-layout {
+      background-color: $colorLight1;
+      color: $colorDark5;
+    }
+  }
+
+  .ant-layout-header {
+    height: $headerHeight;
+    padding: 0px;
+    background-color: transparent;
+    font-family: 'Inter';
+  }
+
+  &-desktop {
+    .ant-layout-footer {
+      height: $footerHeight;
+    }
+  }
+  &-mobile {
+    .ant-layout-footer {
+      height: $footerHeightMobile;
+    }
+  }
+  .ant-layout-footer {
+    z-index: 2;
+
+    height: $footerHeight;
+    padding: 0px;
+    background-color: transparent;
+    font-family: 'Inter';
+    margin-top: 25px;
+  }
+
+  .ant-layout-content {
+    min-height: calc(100vh - ($headerHeight + $footerHeight));
+    font-family: 'Inter';
+    font-size: 16px;
+  }
+}
+.AuthHelper {
+  &-dark {
+    .ant-layout {
+      background-color: $colorDark5;
+      color: $colorLight;
+    }
+  }
+  &-light {
+    .ant-layout {
+      background-color: $colorLight1;
+      color: $colorDark5;
+    }
+  }
+  .ant-layout {
+    background-image: url(/images/home/upperSegment/background.webp);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: 0 0, center;
+  }
+
+  .ant-layout {
+    &-dark {
+      background-color: $colorDark4;
+      color: $colorLight;
+    }
+    &-light {
+      background-color: $colorLight1;
+      color: $colorDark5;
+    }
+  }
+
+  .ant-layout-header {
+    height: $headerHeight;
+    padding: 0px;
+    background-color: transparent;
+    font-family: 'Inter';
+  }
+
+  .ant-layout-footer {
+    height: $footerHeight;
+    padding: 0px;
+    background-color: transparent;
+    font-family: 'Inter';
+  }
+
+  .ant-layout-content {
+    min-height: calc(100vh - ($headerHeight + $footerHeight));
+    font-family: 'Inter';
+    font-size: 16px;
+  }
+}
