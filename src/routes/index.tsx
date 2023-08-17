@@ -1,5 +1,6 @@
-import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { component$ } from '@builder.io/qwik';
+import type { DocumentHead } from '@builder.io/qwik-city';
+import { Example } from 'src/utils/gen/useEventListener';
 
 export default component$(() => {
   return (
@@ -10,16 +11,17 @@ export default component$(() => {
         <br />
         Happy coding.
       </p>
+      <Example />
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: 'Welcome to Qwik',
   meta: [
     {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
+      name: 'description',
+      content: 'Qwik site description'
+    }
+  ]
 };
