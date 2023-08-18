@@ -1,17 +1,11 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Example } from 'src/utils/gen/useEventListener';
+import { Home } from 'src/pages/Home/Home';
 
 export default component$(() => {
   return (
     <>
-      <h1>Hi 👋</h1>
-      <p>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </p>
-      <Example />
+      <Home />
     </>
   );
 });

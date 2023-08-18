@@ -11,8 +11,8 @@ export function useWindowSize() {
   const windowSize = useStore({ width: -1, height: -1 });
 
   const directHandler = $((width: number, height: number) => {
-    windowSize.height = width;
-    windowSize.width = height;
+    windowSize.height = height;
+    windowSize.width = width;
   });
   useResizeListener(
     $((event: any) => {

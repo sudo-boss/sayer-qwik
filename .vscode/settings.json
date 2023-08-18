@@ -30,8 +30,8 @@
     "trpc",
     "webp"
   ],"material-icon-theme.folders.associations": {
-    "redux": "Redux-store",
-    "Redux": "Redux-store",
+    "store": "Redux-store",
+    "Store": "Redux-store",
     "appConfig": "config",
     "AppConfig": "config",
     "Providers": "context",

@@ -1,6 +1,7 @@
 import { component$, Slot } from '@builder.io/qwik';
 import type { RequestHandler } from '@builder.io/qwik-city';
 import { LayoutProvider } from 'src/layout/LayoutProvider';
+import { LogicProvider } from 'src/providers/LogicProvider';
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -15,8 +16,10 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 
 export default component$(() => {
   return (
-    <LayoutProvider>
-      <Slot />
-    </LayoutProvider>
+    <LogicProvider>
+      <LayoutProvider>
+        <Slot />
+      </LayoutProvider>
+    </LogicProvider>
   );
 });
