@@ -11,7 +11,7 @@ module.exports = (plop) => {
     actions: ({}) => [
       {
         type: 'add',
-        path: '../src/store/{{camelCase name}}.module.scss',
+        path: '../src/store/{{camelCase name}}.ts',
         templateFile: `templates/store/storeEx.ts.hbs`,
       },
     ],
