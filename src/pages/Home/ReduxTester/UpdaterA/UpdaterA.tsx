@@ -1,24 +1,25 @@
 // ---Dependencies
 import { $, component$ } from '@builder.io/qwik';
-import { appInfoStore } from 'src/store/appInfo/store';
+import { useFStore } from 'src/store/config/storeConfig';
 
 /**
  * UpdaterA Component:  Descripción del comportamiento...
  */
 export const UpdaterA = component$(() => {
   // -----------------------CONSTS, HOOKS, STATES
-  const updateLoader = $(() => {
-    appInfoStore.setState((state2) => ({
-      ...state2,
-      isLoadingGlobal: !state2.isLoadingGlobal
-    }));
-  });
+  const { state } = useFStore();
+
   // -----------------------MAIN METHODS
-  // -----------------------AUX METHODS
+  const updateLoader = $(() => {
+    state.appInfo.isLoadingGlobal = !state.appInfo.isLoadingGlobal;
+  });
+
   // -----------------------RENDER
   return (
     <div class="UpdaterA">
-      <p>UpdaterA</p>
+      <p>
+        UpdaterA: <span>{String(state.appInfo.isLoadingGlobal)}</span>
+      </p>
       <button onClick$={updateLoader}>update loader</button>
     </div>
   );

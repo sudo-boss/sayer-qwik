@@ -1,6 +1,6 @@
 // ---Dependencies
 import { $, component$ } from '@builder.io/qwik';
-import { appInfoStore } from 'src/store/appInfo/store';
+import { useFStore } from 'src/store/config/storeConfig';
 import type { OnInput } from 'src/utils/types/qwik';
 
 /**
@@ -8,12 +8,10 @@ import type { OnInput } from 'src/utils/types/qwik';
  */
 export const UpdaterB = component$(() => {
   // -----------------------CONSTS, HOOKS, STATES
+  const { state } = useFStore();
   // -----------------------MAIN METHODS
   const updateTest: OnInput = $((_, el) => {
-    appInfoStore.setState((state) => ({
-      ...state,
-      test: el.value
-    }));
+    state.appInfo.test = el.value;
   });
   // -----------------------AUX METHODS
   // -----------------------RENDER

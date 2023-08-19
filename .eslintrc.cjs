@@ -3,12 +3,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:qwik/recommended'
+    'plugin:qwik/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -17,11 +17,12 @@ module.exports = {
     ecmaVersion: 2021,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   plugins: ['@typescript-eslint'],
   rules: {
+    '@typescript-eslint/no-unsafe-return': 'warn',
     '@typescript-eslint/require-await': 'off',
     '@typescript-eslint/no-floating-promises': 'off', // Detecta los QRL como promesas
     '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -41,6 +42,16 @@ module.exports = {
     'no-console': 'off',
     '@typescript-eslint/no-unused-vars': ['error'],
     '@typescript-eslint/consistent-type-imports': 'warn',
-    '@typescript-eslint/no-unnecessary-condition': 'warn'
-  }
+    '@typescript-eslint/no-unnecessary-condition': 'warn',
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'ignore',
+      },
+    ],
+  },
 };

@@ -1,13 +1,13 @@
 // ---Dependencies
 import { component$ } from '@builder.io/qwik';
-import { useStoreAppInfo } from 'src/store/appInfo/store';
+import { useFStore } from 'src/store/config/storeConfig';
 
 /**
  * StateReader Component:  Descripción del comportamiento...
  */
 export const StateReader = component$(() => {
   // -----------------------CONSTS, HOOKS, STATES
-  const state = useStoreAppInfo();
+  const { state } = useFStore();
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER

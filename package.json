@@ -21,6 +21,7 @@
     "qwik": "qwik",
     "_3": "-----------------------------CUSTOM------------------------------------------",
     "generate-comp": "npx plop --plopfile generators/plopfile.js",
+    "generate-store": "npx plop --plopfile generators/plopfile-store.js",
     "generate-hook": "npx plop --plopfile generators/plopfile-hook.js"
   },
   "devDependencies": {
@@ -38,14 +39,11 @@
     "postcss": "8.4.23",
     "postcss-preset-env": "8.5.1",
     "prettier": "2.8.8",
-    "react": "18.2.0",
     "sass": "1.65.1",
     "typescript": "5.1.6",
     "undici": "5.22.1",
     "vite": "4.4.0",
     "vite-tsconfig-paths": "4.2.0"
   },
-  "dependencies": {
-    "zustand": "4.4.1"
-  }
+  "dependencies": {}
 }
