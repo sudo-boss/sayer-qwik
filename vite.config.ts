@@ -12,6 +12,11 @@ export default defineConfig(() => {
       },
     },
     define: {
-    }
+    },
+    resolve: {
+      alias: {
+        '@node_modules': './node_modules'
+      }
+   },
   };
 });
