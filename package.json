@@ -47,6 +47,6 @@
     "vite-tsconfig-paths": "4.2.0"
   },
   "dependencies": {
-    "qwik-forge-grid": "2.2.2"
+    "qwik-forge-grid": "2.3.3"
   }
 }

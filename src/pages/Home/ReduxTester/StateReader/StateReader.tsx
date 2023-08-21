@@ -13,7 +13,6 @@ export const StateReader = component$(() => {
   // -----------------------RENDER
   return (
     <div class="StateReader">
-      <p>StateReader</p>
       <pre>{JSON.stringify(state, null, ' ')}</pre>
     </div>
   );
