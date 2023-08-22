@@ -2,7 +2,6 @@
 import { component$ } from '@builder.io/qwik';
 import { ReduxTester } from './ReduxTester/ReduxTester';
 // ---Styles
-import { useStyleBuilder } from 'src/utils/app/useStyleBuilder';
 import style from './Home.module.scss';
 import { ThemeExample } from 'src/layout/useAppListener/useTheme/ThemeExample/ThemeExample';
 
@@ -12,14 +11,13 @@ import { ThemeExample } from 'src/layout/useAppListener/useTheme/ThemeExample/Th
  */
 export const Home = component$(() => {
   // -----------------------CONSTS, HOOKS, STATES
-  const { classNames } = useStyleBuilder(style.Home);
 
   // -----------------------RENDER
   return (
-    <div class={classNames.value}>
+    <div class={style.Home}>
       <h1>Home</h1>
       <hr />
-      classNames: {classNames.value}
+      classNames: {style.Home}
       <br />
       <ReduxTester />
       <br />

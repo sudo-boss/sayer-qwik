@@ -1,6 +1,5 @@
 // ---Dependencies
 import { component$ } from '@builder.io/qwik';
-import { useStyleBuilder } from 'src/utils/app/useStyleBuilder';
 // ---Styles
 import style from './{{pascalCase name}}.module.scss';
 
@@ -12,12 +11,11 @@ interface Props {}
  */
 export const {{pascalCase name}} = component$<Props>((props) =>  {
   // -----------------------CONSTS, HOOKS, STATES
-  const { classNames } = useStyleBuilder(style.{{pascalCase name}});
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <div class={classNames.value}>
+    <div class={style.{{pascalCase name}}}>
       <p>{{pascalCase name}}</p>
     </div>
   );

@@ -6,4 +6,20 @@
   font-family: "Inter";
   margin: 0;
   padding: 0;
+
+  .ReduxTester {
+    @include onlyIn(xl) {
+      background-color: plum;
+    }
+    &-xl {
+      background-color: plum;
+    }
+  }
+  &-lg {
+    background-color: #f28181;
+  }
+
+  // @include onlyIn(lg) {
+  //   background-color: #f28181;
+  // }
 }

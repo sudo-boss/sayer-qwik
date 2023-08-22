@@ -4,7 +4,8 @@ import type { ResponsiveData } from 'src/layout/useAppListener/useScreenBreakpoi
 import { useFStore } from 'src/store/config/storeConfig';
 
 /**
- * useStyleBuilder Component:  Descripción del comportamiento...
+ * @deprecated
+ * useStyleBuilder Component: Construye clases dinámicas para diferentes tamaños de pantalla y temas
  */
 export function useStyleBuilder(containerName?: string) {
   // -----------------------CONSTS, HOOKS, STATES
