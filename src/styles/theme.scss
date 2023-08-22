@@ -1,37 +1,27 @@
-@import './_animations.scss';
-@import './variables';
+@import "./_animations.scss";
+@import "./variables";
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/src/static/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype-variations');
+  font-family: "Inter";
+  src: url("/src/static/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype-variations");
   font-weight: 100 900;
   font-stretch: 50% 200%;
   font-style: oblique 0deg 10deg;
   font-display: swap;
 }
 
-default button css off button,
-input[type='submit'],
-input[type='reset'] {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
-body {
+html,
+body,
+main {
   margin: 0px;
   padding: 0px;
-  font-family: 'Inter';
   font-size: 16px;
-  :where(.css-dev-only-do-not-override-1xhe879)[class^='ant-layout'],
-  :where(.css-dev-only-do-not-override-1xhe879)[class*=' ant-layout'] {
-    font-family: 'Inter';
-    font-size: 16px;
-  }
+}
+
+#root,
+#root > div {
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -42,7 +32,10 @@ p {
   }
 }
 
+h1 {
+  margin: 0;
+}
+
 .pinkRightBorder {
   border-right: 1px solid $colorMexPink;
 }
-

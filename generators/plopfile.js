@@ -19,14 +19,21 @@ module.exports = (plop) => {
         message: 'Tu componente incluye estilos?',
         default: false,
       },
+      {
+        type: 'confirm',
+        name: 'haveProps',
+        message: 'Tu componente recibe props?',
+        default: false,
+      },
     ],
-    actions: ({ haveStyles, haveLocales }) => {
-      const compTemplateName = haveStyles ? 'withStyleComponent' : 'noStyleComponent';
+    actions: ({ haveStyles, haveProps }) => {
+      const styleType = haveStyles ? 'withStyle' : 'noStyle';
+      const propsType = haveProps ? '' : 'NoProps';
 
       const compTemplate = {
         type: 'add',
         path: '{{path}}/{{pascalCase name}}/{{pascalCase name}}.tsx',
-        templateFile: `templates/components/${compTemplateName}.tsx.hbs`,
+        templateFile: `templates/components/${styleType}${propsType}Component.tsx.hbs`,
       };
 
       const styles = {

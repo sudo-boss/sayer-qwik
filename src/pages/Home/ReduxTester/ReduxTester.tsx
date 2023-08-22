@@ -15,7 +15,7 @@ export const ReduxTester = component$(() => {
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <Frow debug vAlign="middle" class="ReduxTester">
+    <Frow vAlign="middle" class="ReduxTester">
       <Fcol>
         <h3>ReduxTester</h3>
       </Fcol>

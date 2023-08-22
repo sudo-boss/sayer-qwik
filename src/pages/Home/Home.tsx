@@ -1,9 +1,8 @@
 // ---Dependencies
 import { component$ } from '@builder.io/qwik';
 import { ReduxTester } from './ReduxTester/ReduxTester';
-import { useStyleBuilder } from 'src/utils/app/useStyleBuilder';
-// import { useSelectorBuilder } from 'src/utils/hooks/styles/useSelectorBuilder';
 // ---Styles
+import { useStyleBuilder } from 'src/utils/app/useStyleBuilder';
 import style from './Home.module.scss';
 
 /**

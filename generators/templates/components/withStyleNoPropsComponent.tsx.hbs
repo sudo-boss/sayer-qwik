@@ -4,13 +4,10 @@ import { useStyleBuilder } from 'src/utils/app/useStyleBuilder';
 // ---Styles
 import style from './{{pascalCase name}}.module.scss';
 
-interface Props {}
-
 /**
  * {{pascalCase name}} Component:  Descripción del comportamiento...
- * @param {Props} props - Parámetros del componente como: ...
  */
-export const {{pascalCase name}} = component$<Props>((props) =>  {
+export const {{pascalCase name}} = component$(() =>  {
   // -----------------------CONSTS, HOOKS, STATES
   const { classNames } = useStyleBuilder(style.{{pascalCase name}});
   // -----------------------MAIN METHODS
