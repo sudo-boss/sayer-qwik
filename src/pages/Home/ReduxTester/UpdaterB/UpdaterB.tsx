@@ -18,7 +18,7 @@ export const UpdaterB = component$(() => {
   return (
     <div class="UpdaterB">
       <p>UpdaterB</p>
-      <input type="text" onInput$={updateTest} />
+      <input type="text" value={state.appInfo.test} onInput$={updateTest} />
     </div>
   );
 });

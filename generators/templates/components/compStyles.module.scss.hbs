@@ -1,8 +1,9 @@
-@import '/public/styles/variables';
-@import '/public/styles/animations';
-@import '/public/styles/utils';
+@import '/src/styles/variables';
+@import '/src/styles/animations';
+@import '/src/styles/utils';
 
 .{{pascalCase name}} {
+      font-family: 'Inter';
 }
 
 //-----------------ExampleCont
@@ -20,12 +21,12 @@
       font-family: 'Inter';
     }
   }
-  &-dark {
+  &-sm {
     .someContainer {
       font-family: 'Inter';
     }
   }
-  &-light {
+  &-lg { // xs sm md lg xl xxl
     .someContainer {
       font-family: 'Inter';
     }

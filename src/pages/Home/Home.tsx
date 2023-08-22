@@ -1,9 +1,10 @@
 // ---Dependencies
 import { component$ } from '@builder.io/qwik';
 import { ReduxTester } from './ReduxTester/ReduxTester';
+import { useStyleBuilder } from 'src/utils/app/useStyleBuilder';
 // import { useSelectorBuilder } from 'src/utils/hooks/styles/useSelectorBuilder';
 // ---Styles
-// import style from './Home.module.scss';
+import style from './Home.module.scss';
 
 /**
  * Home Component:  Descripción del comportamiento...
@@ -11,14 +12,14 @@ import { ReduxTester } from './ReduxTester/ReduxTester';
  */
 export const Home = component$(() => {
   // -----------------------CONSTS, HOOKS, STATES
+  const { classNames } = useStyleBuilder(style.Home);
 
   // -----------------------RENDER
   return (
-    <div
-    //className={classNames}
-    >
+    <div class={classNames.value}>
       <h1>Home</h1>
       <hr />
+      classNames: {classNames.value}
       <br />
       <ReduxTester />
     </div>

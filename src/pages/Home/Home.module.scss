@@ -1,33 +1,40 @@
-@import '/public/styles/variables';
-@import '/public/styles/animations';
-@import '/public/styles/utils';
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
 
 .Home {
+  font-family: "Inter";
+  &-xl {
+    background-color: $colorFour1;
+  }
+  &-lg {
+    background-color: #f28181;
+  }
 }
 
 //-----------------ExampleCont
 .ExampleCont {
   .someContainer {
-    font-family: 'Inter';
+    font-family: "Inter";
   }
   &-desktop {
     .someContainer {
-      font-family: 'Inter';
+      font-family: "Inter";
     }
   }
   &-mobile {
     .someContainer {
-      font-family: 'Inter';
+      font-family: "Inter";
     }
   }
   &-dark {
     .someContainer {
-      font-family: 'Inter';
+      font-family: "Inter";
     }
   }
   &-light {
     .someContainer {
-      font-family: 'Inter';
+      font-family: "Inter";
     }
   }
 }
