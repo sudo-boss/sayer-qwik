@@ -2,8 +2,8 @@ export interface AppInfoState {
   isMobile: boolean;
   winSize: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
   isLoadingGlobal: boolean;
-  test?: string;
-  count: number;
+  test: string;
+  theme: 'green' | 'purple'; // Add if needed
 }
 
 export const APP_INFO_INIT: AppInfoState = {
@@ -11,5 +11,5 @@ export const APP_INFO_INIT: AppInfoState = {
   isMobile: true,
   winSize: 'sm',
   test: '',
-  count: 0,
+  theme: 'purple',
 };

@@ -4,6 +4,7 @@ import { ReduxTester } from './ReduxTester/ReduxTester';
 // ---Styles
 import { useStyleBuilder } from 'src/utils/app/useStyleBuilder';
 import style from './Home.module.scss';
+import { ThemeExample } from 'src/layout/useAppListener/useTheme/ThemeExample/ThemeExample';
 
 /**
  * Home Component:  Descripción del comportamiento...
@@ -21,6 +22,8 @@ export const Home = component$(() => {
       classNames: {classNames.value}
       <br />
       <ReduxTester />
+      <br />
+      <ThemeExample />
     </div>
   );
 });

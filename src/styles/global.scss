@@ -1,5 +1,5 @@
-@import 'animations';
-@import 'variables';
+@import "animations";
+@import "variables";
 
 // ----------------------------------Layout------------------------------------
 //-----------------GlobalLayout
@@ -21,7 +21,7 @@
     height: $headerHeight;
     padding: 0px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: "Inter";
   }
 
   &-desktop {
@@ -40,13 +40,13 @@
     height: $footerHeight;
     padding: 0px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: "Inter";
     margin-top: 25px;
   }
 
   .ant-layout-content {
     min-height: calc(100vh - ($headerHeight + $footerHeight));
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 16px;
   }
 }
@@ -67,7 +67,9 @@
     background-image: url(/images/home/upperSegment/background.webp);
     background-size: 100vw;
     background-repeat: no-repeat;
-    background-position: 0 0, center;
+    background-position:
+      0 0,
+      center;
   }
 
   .ant-layout {
@@ -85,23 +87,29 @@
     height: $headerHeight;
     padding: 0px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: "Inter";
   }
 
   .ant-layout-footer {
     height: $footerHeight;
     padding: 0px;
     background-color: transparent;
-    font-family: 'Inter';
+    font-family: "Inter";
   }
 
   .ant-layout-content {
     min-height: calc(100vh - ($headerHeight + $footerHeight));
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 16px;
   }
 }
-
+main {
+  font-family: "Inter";
+  font-size: 16px;
+  > div:first-child {
+    min-height: calc(100vh - ($headerHeight + $footerHeight));
+  }
+}
 // -----------TRUE GLOBAL
 
 .center-block {

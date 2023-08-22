@@ -10,19 +10,24 @@ module.exports = (plop) => {
       {
         type: 'input',
         name: 'path',
-        message:
-          'Path de tu hook? (click derecho copy path en el FOLDER donde quieres tu hook)',
+        message: 'Path de tu hook? (click derecho copy path en el FOLDER donde quieres tu hook)',
+      },
+      {
+        type: 'confirm',
+        name: 'haveProps',
+        message: 'Tu componente recibe props?',
+        default: false,
       },
     ],
-    actions: () => {
+    actions: ({ haveProps }) => {
+      const propsType = haveProps ? '' : 'NoProps';
 
       const hook = {
         type: 'add',
         path: '{{path}}/{{camelCase name}}.ts',
-        templateFile: `templates/others/hook.ts.hbs`,
+        templateFile: `templates/others/hook${propsType}.ts.hbs`,
       };
 
-    
       return [hook];
     },
   });

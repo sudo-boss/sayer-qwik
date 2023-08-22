@@ -18,17 +18,11 @@ main {
   font-size: 16px;
 }
 
-#root,
-#root > div {
-  margin: 0;
-  padding: 0;
-}
-
 p {
   white-space: pre-line;
   font-size: 16px;
   span {
-    color: $colorThree3;
+    color: $colorPurple;
   }
 }
 
@@ -37,5 +31,5 @@ h1 {
 }
 
 .pinkRightBorder {
-  border-right: 1px solid $colorMexPink;
+  border-right: 1px solid $colorPurple;
 }

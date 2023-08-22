@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 /** Limita el número de lineas con una elipse $lines es el número de lineas a limitar */
 @mixin limitTextLines($lines) {

@@ -42,19 +42,6 @@ module.exports = (plop) => {
         templateFile: `templates/components/compStyles.module.scss.hbs`,
       };
 
-      const locales = [
-        {
-          type: 'add',
-          path: '{{path}}/{{pascalCase name}}/locales/use{{pascalCase name}}Locales.ts',
-          templateFile: 'templates/page/localesHook.ts.hbs',
-        },
-        {
-          type: 'add',
-          path: '{{path}}/{{pascalCase name}}/locales/locales.ts',
-          templateFile: 'templates/page/locales.ts.hbs',
-        },
-      ];
-
       let actions = [compTemplate];
       if (haveStyles) {
         actions.push(styles);
