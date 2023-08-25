@@ -18,4 +18,8 @@
     text-align: center;
     display: block;
   }
+  a:first-child {
+    text-align: start;
+    padding-left: 10px;
+  }
 }

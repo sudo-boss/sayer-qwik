@@ -19,7 +19,7 @@ export const Navbar = component$(() => {
     <header class={style.Navbar}>
       <Mrow>
         <Mcol {...customResponsive(40, 100)}>
-          <Link href="/health">Navbar: {location.url.pathname}</Link>
+          <Link href="/">Home{location.url.pathname}</Link>
         </Mcol>
         <Mcol {...customResponsive(15, 50)}>
           <Link href="/health">Health</Link>

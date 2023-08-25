@@ -28,7 +28,7 @@ module.exports = (plop) => {
       const compTemplate = {
         type: 'add',
         path: '../src/pages/{{pascalCase name}}/{{pascalCase name}}.tsx',
-        templateFile: `templates/components/withStyleComponent.tsx.hbs`,
+        templateFile: `templates/components/withStyleNoPropsComponent.tsx.hbs`,
       };
 
       const styles = {
