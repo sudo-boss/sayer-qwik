@@ -1,11 +1,11 @@
 import type { GridSystem } from 'qwik-forge-grid/lib-types/components/Fcol/useStyles';
 
 /**
- * responsiveBasicGrid function: Handle the grid for responsivity basic behaviors for being used in paramas for antd cols
+ * basicResponsive function: Handle the grid for responsivity basic behaviors for being used in paramas for antd cols
  * @param {number} normalSize - Number to handle the size of antd colums in mid to xxl screens
  * @returns
  */
-export function responsiveBasicGrid(normalSize: number) {
+export function basicResponsive(normalSize: number) {
   return {
     xs: 100,
     sm: 100,
@@ -17,11 +17,43 @@ export function responsiveBasicGrid(normalSize: number) {
 }
 
 /**
- * booleanResponsiveProps: Asigna "normalSize" a tamaños lg, xl y xxl, asigna mobileSize a xs, sm y md
+ * basicResponsiveMD function: Handle the grid for responsivity basic behaviors for being used in paramas for antd cols
  * @param {number} normalSize - Number to handle the size of antd colums in mid to xxl screens
  * @returns
  */
-export function boolResponsiveProps(normalSize: number, mobileSize: number) {
+export function basicResponsiveMD(normalSize: number) {
+  return {
+    xs: 100,
+    sm: 100,
+    md: 100,
+    lg: normalSize,
+    xl: normalSize,
+    xxl: normalSize,
+  };
+}
+
+/**
+ * customResponsive: Asigna "normalSize" a tamaños lg, xl y xxl, asigna mobileSize a xs, sm y md
+ * @param {number} normalSize - Number to handle the size of antd colums in mid to xxl screens
+ * @returns
+ */
+export function customResponsive(normalSize: number, mobileSize: number) {
+  return {
+    xs: mobileSize,
+    sm: mobileSize,
+    md: normalSize,
+    lg: normalSize,
+    xl: normalSize,
+    xxl: normalSize,
+  };
+}
+
+/**
+ * customResponsiveMD: Asigna "normalSize" a tamaños lg, xl y xxl, asigna mobileSize a xs, sm y md
+ * @param {number} normalSize - Number to handle the size of antd colums in mid to xxl screens
+ * @returns
+ */
+export function customResponsiveMD(normalSize: number, mobileSize: number) {
   return {
     xs: mobileSize,
     sm: mobileSize,
