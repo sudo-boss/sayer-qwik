@@ -10,7 +10,7 @@ export default component$(() => {
   );
 });
 
-export const head: DocumentHead = (/**{ url } */) => ({
+export const head: DocumentHead = {
   title: 'Welcome to Qwik',
   meta: [
     {
@@ -18,10 +18,4 @@ export const head: DocumentHead = (/**{ url } */) => ({
       content: 'Qwik site description',
     },
   ],
-  // links: [
-  //   {
-  //     rel: 'canonical',
-  //     href: url.pathname,
-  //   },
-  // ],
-});
+};
