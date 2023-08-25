@@ -21,6 +21,7 @@
     "qwik": "qwik",
     "_3": "-----------------------------CUSTOM------------------------------------------",
     "generate-comp": "npx plop --plopfile generators/plopfile.js",
+    "generate-page": "npx plop --plopfile generators/plopfile-page.js",
     "generate-store": "npx plop --plopfile generators/plopfile-store.js",
     "generate-hook": "npx plop --plopfile generators/plopfile-hook.js"
   },

@@ -30,8 +30,6 @@ module.exports = (plop) => {
       const styleType = haveStyles ? 'withStyle' : 'noStyle';
       const propsType = haveProps ? '' : 'NoProps';
 
-      console.log({ file: `templates/components/${styleType}${propsType}Component.tsx.hbs` });
-
       const compTemplate = {
         type: 'add',
         path: '{{path}}/{{pascalCase name}}/{{pascalCase name}}.tsx',
