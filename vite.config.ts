@@ -6,6 +6,7 @@ import path from "path";
 
 export default defineConfig(() => {
   return {
+    logLevel: 'info', 
     plugins: [qwikCity(), qwikVite(), 
       tsconfigPaths()],
     preview: {

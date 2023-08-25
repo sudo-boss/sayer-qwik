@@ -11,5 +11,8 @@ module.exports = {
     cssnano: {
       preset: 'default',
     },
+    'postcss-sort-media-queries': {
+      sort: 'mobile-first', // puedes cambiar a 'desktop-first' si lo prefieres
+    },
   },
 };

@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
+    '@typescript-eslint/no-misused-promises': 'warn',
     '@typescript-eslint/no-unsafe-return': 'warn',
     '@typescript-eslint/require-await': 'off',
     '@typescript-eslint/no-floating-promises': 'off', // Detecta los QRL como promesas
