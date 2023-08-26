@@ -1,8 +1,8 @@
-export const commitID = `fd6b10db65e098e8abf94aba32438f1dbbd5484c`;
+export const commitID = `d11c4a84716a2c063aeaeeefd8b30aa3a5075654`;
     
-  export const commitMssg = `cloudfront addapters`;
+  export const commitMssg = `yarn lock clean install`;
   
-  export const commitDate = `Fri Aug 25 2023 20:18:27 GMT-0600 (Central Standard Time)`;
+  export const commitDate = `Fri Aug 25 2023 20:32:16 GMT-0600 (Central Standard Time)`;
   
   export const commitAuthor = `sb`;
   
