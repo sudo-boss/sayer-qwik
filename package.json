@@ -47,7 +47,6 @@
     "eslint": "8.45.0",
     "eslint-plugin-qwik": "1.2.7",
     "git-last-commit": "1.0.1",
-    "lighthouse": "11.0.0",
     "plop": "3.1.2",
     "postcss": "8.4.28",
     "postcss-import": "^15.1.0",
