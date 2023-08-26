@@ -28,7 +28,6 @@
     "audit-desk": "lighthouse http://localhost:4173 --view --preset=desktop",
     "audit-mob": "lighthouse http://localhost:4173 --view",
     "_4": "-----------------------------PRE HOOKS------------------------------------------",
-    "preinstall": "node ./config/git-hooks/install-hooks.js",
     "_5": "-----------------------------CUSTOM------------------------------------------",
     "generate-comp": "npx plop --plopfile generators/plopfile.js",
     "generate-hook": "npx plop --plopfile generators/plopfile-hook.js",
