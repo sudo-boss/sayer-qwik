@@ -7,30 +7,33 @@
   "private": true,
   "scripts": {
     "_0": "-----------------------------MAIN LOCAL------------------------------------------",
-    "dev": "vite --mode ssr",
     "start": "vite --open --mode ssr",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "preview": "qwik build preview && vite preview --open",
     "_1": "-----------------------------PROD SCRIPTS------------------------------------------",
     "build": "qwik build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.server": "vite build -c adapters/cloudflare-pages/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "audit-mob": "lighthouse http://localhost:4173 --view",
-    "audit-desk": "lighthouse http://localhost:4173 --view --preset=desktop",
+    "deploy": "wrangler pages publish ./dist",
+    "serve": "wrangler pages dev ./dist",
     "_2": "-----------------------------QWIK SCRIPTS------------------------------------------",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
-    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "qwik": "qwik",
     "fmt": "prettier --write .",
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
-    "qwik": "qwik",
-    "_3": "-----------------------------PRE HOOKS------------------------------------------",
+    "_3": "-----------------------------TEST SCRIPTS------------------------------------------",
+    "audit-desk": "lighthouse http://localhost:4173 --view --preset=desktop",
+    "audit-mob": "lighthouse http://localhost:4173 --view",
+    "_4": "-----------------------------PRE HOOKS------------------------------------------",
     "preinstall": "node ./config/git-hooks/install-hooks.js",
-    "_4": "-----------------------------CUSTOM------------------------------------------",
+    "_5": "-----------------------------CUSTOM------------------------------------------",
     "generate-comp": "npx plop --plopfile generators/plopfile.js",
+    "generate-hook": "npx plop --plopfile generators/plopfile-hook.js",
     "generate-page": "npx plop --plopfile generators/plopfile-page.js",
-    "generate-store": "npx plop --plopfile generators/plopfile-store.js",
-    "generate-hook": "npx plop --plopfile generators/plopfile-hook.js"
+    "generate-store": "npx plop --plopfile generators/plopfile-store.js"
   },
   "devDependencies": {
     "@builder.io/qwik": "1.2.7",
@@ -55,7 +58,8 @@
     "typescript": "5.1.6",
     "undici": "5.22.1",
     "vite": "4.4.0",
-    "vite-tsconfig-paths": "4.2.0"
+    "vite-tsconfig-paths": "4.2.0",
+    "wrangler": "3.6.0"
   },
   "dependencies": {
     "qwik-forge-grid": "2.3.3"
