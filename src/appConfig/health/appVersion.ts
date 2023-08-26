@@ -1,8 +1,8 @@
-export const commitID = `dfd00cb1a89d3d1fe07f974fdbe6541b4a7a4eff`;
+export const commitID = `0c6c49cd46b1455b8bc63d5617d7673349125cc7`;
     
-  export const commitMssg = `prehook removed`;
+  export const commitMssg = `migration to npm from yarn`;
   
-  export const commitDate = `Fri Aug 25 2023 20:41:46 GMT-0600 (Central Standard Time)`;
+  export const commitDate = `Fri Aug 25 2023 20:50:13 GMT-0600 (Central Standard Time)`;
   
   export const commitAuthor = `sb`;
   
