@@ -20,7 +20,7 @@ import { getPokeApi } from 'src/services/pokemon';
 
 export const useRandPokemon = routeLoader$(async () => {
   const response = await fetch(getPokeApi(), {
-    headers: { Accept: 'application/json' },
+    headers: { Accept: 'application/json', Purpose: 'Purpose' },
   });
   const pokemon = (await response.json()) as Pokemon;
 
