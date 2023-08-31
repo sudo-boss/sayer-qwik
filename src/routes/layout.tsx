@@ -14,6 +14,19 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   });
 };
 
+import { routeLoader$ } from '@builder.io/qwik-city';
+import type { Pokemon } from 'src/services/pokemon';
+import { getPokeApi } from 'src/services/pokemon';
+
+export const useRandPokemon = routeLoader$(async () => {
+  const response = await fetch(getPokeApi(), {
+    headers: { Accept: 'application/json' },
+  });
+  const pokemon = (await response.json()) as Pokemon;
+
+  return pokemon;
+});
+
 export default component$(() => {
   return (
     <LogicProvider>

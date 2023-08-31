@@ -25,6 +25,9 @@ export const Navbar = component$(() => {
           <Link href="/health">Health</Link>
         </Mcol>
         <Mcol {...customResponsive(15, 50)}>
+          <Link href="/ssr">SSR</Link>
+        </Mcol>
+        <Mcol {...customResponsive(15, 50)}>
           <Link href="/err">Err</Link>
         </Mcol>
       </Mrow>

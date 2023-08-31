@@ -1,8 +1,8 @@
-export const commitID = `52ba1a255321a1804e9b9be1f4a86ddd4ab0e4ac`;
+export const commitID = `447435638a7dd105ca625e1861fa18ed61b46ba9`;
     
-  export const commitMssg = `migration to npm from yarn v2`;
+  export const commitMssg = `ssr example agregado`;
   
-  export const commitDate = `Fri Aug 25 2023 20:50:31 GMT-0600 (Central Standard Time)`;
+  export const commitDate = `Thu Aug 31 2023 10:15:10 GMT-0600 (Central Standard Time)`;
   
   export const commitAuthor = `sb`;
   

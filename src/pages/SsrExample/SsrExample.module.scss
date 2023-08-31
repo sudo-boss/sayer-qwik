@@ -1,0 +1,16 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.SsrExample {
+  font-family: "Inter";
+  text-align: center;
+  h1 {
+    margin: 50px 0;
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }
