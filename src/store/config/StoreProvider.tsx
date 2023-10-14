@@ -13,97 +13,119 @@ import { APP_NAME, IS_PROD } from 'src/appConfig/globalConfig';
 import type { IFStore } from './storeConfig';
 import type { ReduxDevtools } from 'src/declarations';
 import { INITIAL_REDUCERS, FStore } from './storeConfig';
+import { getFromLocalStorage, saveToLocalStorage } from 'src/utils/functions/localStorageUtils';
 
 interface Props {
   withDevTools?: boolean;
+  useLocalStorage?: boolean;
 }
 
 /**
  * StoreProvider Component:  Descripción del comportamiento...
  * @param {Props} props - Parámetros del componente como: ...
  */
-export const StoreProvider = component$<Props>(({ withDevTools = !IS_PROD }) => {
-  // -----------------------CONSTS, HOOKS, STATES
-  const state = useStore<IFStore>(INITIAL_REDUCERS);
-  const devConn = useSignal<null | NoSerialize<ReturnType<ReduxDevtools['connect']>>>(null);
+export const StoreProvider = component$<Props>(
+  ({ withDevTools = !IS_PROD, useLocalStorage = true }) => {
+    // -----------------------CONSTS, HOOKS, STATES
+    const state = useStore<IFStore>(INITIAL_REDUCERS);
+    const devConn = useSignal<null | NoSerialize<ReturnType<ReduxDevtools['connect']>>>(null);
 
-  //--- Initialize devtools
-  useVisibleTask$(({ cleanup }) => {
-    const useDevTools = withDevTools && window.__REDUX_DEVTOOLS_EXTENSION__;
-    if (useDevTools) {
-      const connection = useDevTools.connect({
-        name: APP_NAME,
-      });
-
-      devConn.value = noSerialize(connection);
-
-      connection.send(
-        {
-          type: 'STORE_INIT',
-          INITIAL_REDUCERS,
-        },
-        INITIAL_REDUCERS,
-      );
-    }
-
-    cleanup(() => {
+    //--- Initialize devtools
+    useVisibleTask$(({ cleanup }) => {
+      const useDevTools = withDevTools && window.__REDUX_DEVTOOLS_EXTENSION__;
       if (useDevTools) {
-        useDevTools.disconnect();
+        const connection = useDevTools.connect({
+          name: APP_NAME,
+        });
+
+        devConn.value = noSerialize(connection);
+
+        connection.send(
+          {
+            type: 'STORE_INIT',
+            INITIAL_REDUCERS,
+          },
+          INITIAL_REDUCERS,
+        );
       }
-    });
-  });
 
-  //---Update State to Devtools
-  useVisibleTask$(({ track }) => {
-    if (devConn.value) {
-      track(() => {
-        const allProps = getAllProps(state);
-        return allProps;
+      cleanup(() => {
+        if (useDevTools) {
+          useDevTools.disconnect();
+        }
       });
+    });
 
-      devConn.value.send(
-        {
-          type: 'STORE_CHANGE',
-          state,
-        },
-        state,
-      );
-    }
-  });
-
-  //---Update Devtools to State (when back steps)
-  useVisibleTask$(({ cleanup }) => {
-    if (devConn.value) {
-      devConn.value.subscribe((evt: { type: string; state: string }) => {
-        if (evt.type === 'DISPATCH') {
-          const prevState = JSON.parse(evt.state) as IFStore;
-
+    //--- Initialize localstorage
+    useVisibleTask$(() => {
+      if (useLocalStorage) {
+        const prevState = getFromLocalStorage<IFStore>('GLOBAL_STORE');
+        if (prevState) {
           const propNames = Object.keys(state) as (keyof IFStore)[];
-
           propNames.forEach((prop) => {
             state[prop] = prevState[prop];
           });
         }
-      });
-    }
-
-    cleanup(() => {
-      if (devConn.value) {
-        devConn.value.unsubscribe();
       }
     });
-  });
 
-  // -----------------------MAIN METHODS
-  // -----------------------AUX METHODS
-  // -----------------------RENDER
-  useContextProvider(FStore, state);
-  return (
-    <>
-      <Slot />
-    </>
-  );
-});
+    //---Update State to Devtools and localstorage
+    useVisibleTask$(({ track }) => {
+      if (devConn.value) {
+        track(() => {
+          const allProps = getAllProps(state);
+          return allProps;
+        });
+
+        devConn.value.send(
+          {
+            type: 'STORE_CHANGE',
+            state,
+          },
+          state,
+        );
+      }
+
+      if (useLocalStorage) {
+        // actualiza estado en localstorage
+        saveToLocalStorage('GLOBAL_STORE', state);
+      }
+    });
+
+    //---Update Devtools to State (when back steps)
+    useVisibleTask$(({ cleanup }) => {
+      if (devConn.value) {
+        devConn.value.subscribe((evt: { type: string; state: string }) => {
+          if (evt.type === 'DISPATCH') {
+            const prevState = JSON.parse(evt.state) as IFStore;
+
+            const propNames = Object.keys(state) as (keyof IFStore)[];
+
+            propNames.forEach((prop) => {
+              state[prop] = prevState[prop];
+            });
+          }
+        });
+      }
+
+      cleanup(() => {
+        if (devConn.value) {
+          devConn.value.unsubscribe();
+        }
+      });
+    });
+
+    // -----------------------MAIN METHODS
+    // -----------------------AUX METHODS
+    // -----------------------RENDER
+    useContextProvider(FStore, state);
+    return (
+      <>
+        <Slot />
+      </>
+    );
+  },
+);
 
 function getAllProps(obj: any, prefix: string = ''): any[] {
   let properties: any[] = [];
