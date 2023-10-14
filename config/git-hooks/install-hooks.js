@@ -24,9 +24,23 @@ function initEnvsHealth() {
   });
 }
 
+function initSecrets() {
+  const fullFile = path.join(__dirname, '../../src/envs/untracked/secrets.ts');
+  const file = "class Envs {\n  SECRETS_TEST = '123456';\n}\n\nexport default new Envs();";
+
+  if (!fs.existsSync(fullFile)) {
+    // Comprueba si el archivo no existe
+    fs.writeFile(fullFile, file, (err) => {
+      if (err) throw err;
+      console.log('Envs secretos creados en ->', fullFile);
+    });
+  }
+}
+
 async function main() {
   await installPostCommit();
   await initEnvsHealth();
+  await initSecrets();
   console.log(`
   '+-----------+'
   '| H O O K S |'
