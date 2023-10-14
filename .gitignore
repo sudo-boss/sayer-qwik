@@ -42,6 +42,7 @@ lerna-debug.log*
 
 
 src/appConfig/health/envsData.ts
+src/envs/untracked/secrets.ts
 
 # Cloudflare
 functions/**/*.js

@@ -49,7 +49,7 @@
     "git-last-commit": "1.0.1",
     "plop": "3.1.2",
     "postcss": "8.4.28",
-    "postcss-import": "^15.1.0",
+    "postcss-import": "15.1.0",
     "postcss-preset-env": "8.5.1",
     "postcss-sort-media-queries": "5.2.0",
     "prettier": "2.8.8",

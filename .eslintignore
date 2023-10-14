@@ -39,3 +39,5 @@ server
 generators
 /config
 postcss.config.js
+
+/envs
