@@ -1,8 +1,8 @@
-export const commitID = `33cdd0c458fbbd99a46585d0b70cb5a837c6a0db`;
+export const commitID = `57901226057d3d52a855a18cb3b7395e31d5f552`;
     
-  export const commitMssg = `fix para inicializar envs secretos cuando no existen`;
+  export const commitMssg = `temp fix envs`;
   
-  export const commitDate = `Sat Oct 14 2023 12:19:10 GMT-0600 (Central Standard Time)`;
+  export const commitDate = `Mon Nov 20 2023 10:25:04 GMT-0600 (Central Standard Time)`;
   
   export const commitAuthor = `sb`;
   
