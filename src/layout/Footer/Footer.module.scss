@@ -5,17 +5,124 @@
 .Footer {
   // ajusta la altura de $footerHeight
   font-family: "Inter";
-  background-color: $colorPurple5;
 
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  @include onlyIn(desk) {
-    height: $footerHeight;
+ .containerFooter {
+  margin-top: 5rem;
+  padding: .5rem 0;
+  background-color: #121D65;
+  color: white;
+  position: relative;
+  z-index: 10;
+
+  svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -9;
   }
-  @include onlyIn(mob) {
-    height: $footerHeightMobile;
+
+  .row01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 .7rem;
+
+    @include onlyIn(mob) {
+      flex-direction: column;
+    }
+    @include onlyIn(desk) {
+      flex-direction: row;
+    }
+    ul {
+      margin-left: .5rem;
+      padding-left: 0;
+      list-style: none;
+
+      @include onlyIn(mob) {
+        text-align: center;
+      }
+      @include onlyIn(desk) {
+        text-align: start;
+      }
+
+      li{
+        display: block;
+        font-weight: 300;
+        margin-bottom: .5rem;
+
+        @include onlyIn(mob) {
+          text-align: center;
+          font-size: 16px;
+        }
+        @include onlyIn(desk) {
+          text-align: start;
+          font-size: 18px;
+        }
+      }
+      li:nth-child(1) {
+        font-weight: 600;
+        
+        @include onlyIn(mob) {
+          text-align: center;
+          font-size: 19px;
+        }
+        @include onlyIn(desk) {
+          text-align: start;
+          font-size: 25px;
+        }
+      }
+    }
   }
+
+  .row02 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .7rem;
+
+    @include onlyIn(mob) {
+      flex-direction: column;
+    }
+    @include onlyIn(desk) {
+      flex-direction: row;
+    }
+
+    p{
+      margin: .5rem 0;
+      text-align: center;
+    }
+  }
+  .row03 {
+    text-align: center;
+  }
+
+  .card {
+    padding: 2rem;
+    border-radius: 20px;
+    border: 5px solid;
+    border-image: linear-gradient(90deg, #0383CE -0.69%, #A9FD55 34.44%, #FFE769 70.11%, #FFA944 99.48%);
+    border-image-slice: 1; /* Ajusta según sea necesario */
+
+    .head {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      
+      .col02 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      p {
+        font-weight: 700;
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+  }
+}
 }
 
 // // desk mov xs sm md lg xl xxl

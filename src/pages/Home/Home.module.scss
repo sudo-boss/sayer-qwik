@@ -7,12 +7,816 @@
   margin: 0;
   padding: 0;
 
-  .ReduxTester {
-    @include onlyIn(xl) {
-      background-color: plum;
+  .containerBanner {
+    background-color: $colorBluePrimary;
+
+    @include onlyIn(mob) {
+      height: 80vh;
+    }
+    @include onlyIn(desk) {
+      height: 50vh;
     }
   }
-  @include onlyIn(lg) {
-    background-color: #f28181;
+
+  .rowGlobalBanner {
+    display: flex;
+    height: 100%;
+    overflow-x: hidden;
+
+    @include onlyIn(mob) {
+      flex-direction: column;
+    }
+    @include onlyIn(desk) {
+      flex-direction: row;
+    }
+
+    .col01 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include onlyIn(mob) {
+        width: 100%;
+        height: 80%;
+      }
+      @include onlyIn(desk) {
+        width: 50%;
+        height: 100%;
+      }
+
+      p {
+        margin: 2px 0;
+        color: white;
+      }
+      p:nth-child(1) {
+        font-weight: 700;
+        
+        @include onlyIn(mob) {
+          font-size: 70px;
+        }
+        @include onlyIn(desk) {
+          font-size: 100px;
+        }
+      }
+      p:nth-child(2) {
+        font-weight: 400;
+        
+        @include onlyIn(mob) {
+          font-size: 25px;
+        }
+        @include onlyIn(desk) {
+          font-size: 30px;
+        }
+      }
+      a {
+        font-weight: 400;
+        cursor: pointer;
+        color: white;
+        
+        @include onlyIn(mob) {
+          font-size: 20px;
+        }
+        @include onlyIn(desk) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .col02 {
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      @include onlyIn(mob) {
+        width: 100%;
+      }
+      @include onlyIn(desk) {
+        width: 50%;
+      }
+
+      .rectangleBluePrimary {
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        
+        @include onlyIn(mob) {
+          width: 90vw;
+          right: -10%;
+        }
+        @include onlyIn(desk) {
+          width: 50vh;
+          right: 0;
+        }
+      }
+      
+      .rectangleBlueSecondary {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        height: auto;
+
+        @include onlyIn(mob) {
+          display: none;
+          width: 90vw;
+        }
+        @include onlyIn(desk) {
+          display: block;
+          width: 50vh;
+        }
+      }
+    
+      .pinturasBanner {
+        position: absolute;
+        @include onlyIn(mob) {
+          width: 80vw;
+          height: auto;
+        }
+        @include onlyIn(desk) {
+          width: 30vw;
+          height: auto;
+        }
+      }
+    }
+    
+  }
+
+  /* segunda seccion */
+
+  .containerProducts {
+    width: 100%;
+    margin: 5rem 0;
+    padding: 1rem 0;
+  }
+
+  .rowGlobalProducts {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    column-gap: 1rem;
+
+    .col {
+      width: 25%;
+      padding: 2rem;
+      
+      .row {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .tagDiscount {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: #FF0000;
+          padding: 2px 10px;
+          border-radius: 20px;
+          color: white;
+          font-weight: 500;
+        }
+
+        p {
+          font-weight: 500;
+          margin: 2px;
+          
+          @include onlyIn(mob) {
+            flex-direction: column;
+            font-size: 16px;
+          }
+          @include onlyIn(desk) {
+            flex-direction: row;
+            font-size: 20px;
+          }
+        }
+      }
+
+    }
+  }
+
+  /* tercera seccion */
+
+  .containerShowMore {
+    width: 100%;
+    margin: 5rem 0;
+    background-color: $colorGreenPrimary;
+  }
+
+  .rowGlobalShowMore {
+    display: flex;
+    height: 100%;
+    overflow-x: hidden;
+
+    @include onlyIn(mob) {
+      flex-direction: column;
+    }
+    @include onlyIn(desk) {
+      flex-direction: row;
+    }
+
+    .col01 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+
+      @include onlyIn(mob) {
+        width: 100%;
+        height: auto;
+      }
+      @include onlyIn(desk) {
+        width: 50%;
+        height: auto;
+      }
+
+      h5 {
+        margin: 2px 0;
+        color: white;
+        text-align: center;
+      }
+      h5:nth-child(1) {
+        font-weight: 500;
+        @include onlyIn(mob) {
+          font-size: 20px;
+        }
+        @include onlyIn(desk) {
+          font-size: 40px;
+        }
+      }
+    }
+
+    .col02 {
+      position: relative;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+      
+      @include onlyIn(mob) {
+        width: 100%;
+      }
+      @include onlyIn(desk) {
+        width: 50%;
+      }
+
+      .pinturaShowMore {
+        z-index: 10;
+        height: 100%;
+        @include onlyIn(mob) {
+          width: 60vw;
+          margin-left: 2rem;
+        }
+        @include onlyIn(desk) {
+          width: 40vh;
+          margin-left: 5rem;
+        }
+      }
+
+      .rectangleShowMore {
+        position: absolute;
+        bottom: 0;
+        height: auto;
+        
+        @include onlyIn(mob) {
+          width: 110vw;
+          right: -3%;
+        }
+        @include onlyIn(desk) {
+          width: 80vh;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  /* cuarta seccion */
+
+  .containerLocation {
+    position: relative;
+    width: 100%;
+    margin: 5rem 0;
+    background-color: #0383CE;
+
+    @include onlyIn(mob) {
+      height: 520px;
+    }
+    @include onlyIn(desk) {
+      height: 420px;
+    }
+  }
+  .gradientlocation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+  }
+
+  .rowGlobalLocation {
+    display: flex;
+    height: 100%;
+
+    @include onlyIn(mob) {
+      flex-direction: column;
+    }
+    @include onlyIn(desk) {
+      flex-direction: row;
+    }
+
+    .col01 {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      @include onlyIn(mob) {
+        height: 40%;
+        width: 100%;
+      }
+      @include onlyIn(desk) {
+        height: auto;
+        width: 50%;
+      }
+      .containerCol {
+        position: relative;
+        
+        @include onlyIn(mob) {
+          font-size: 20px;
+          height: 100%;
+          width: 90%;
+        }
+        @include onlyIn(desk) {
+          font-size: 40px;
+          height: 80%;
+          width: 100%;
+        }
+      }
+
+      h5 {
+        margin: 2px 0;
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+        position: absolute;
+
+        @include onlyIn(mob) {
+          font-size: 20px;
+        }
+        @include onlyIn(desk) {
+          font-size: 40px;
+        }
+      }
+      h5:nth-child(1) {
+        @include onlyIn(mob) {
+          top: 20px;
+          left: 20px;
+        }
+        @include onlyIn(desk) {
+          top: 20px;
+          left: 20px;
+        }
+      }
+      h5:nth-child(2) {
+        @include onlyIn(mob) {
+          top: 50px;
+          left: 80px;
+        }
+        @include onlyIn(desk) {
+          top: 60px;
+          left: 170px;
+        }
+      }
+      h5:nth-child(3) {
+        @include onlyIn(mob) {
+          top: 80px;
+          left: 130px;
+        }
+        @include onlyIn(desk) {
+          top: 100px;
+          left: 270px;
+        }
+      }
+      button {
+        position: absolute;
+        bottom: 0;
+
+        @include onlyIn(mob) {
+          right: 20%;
+        }
+        @include onlyIn(desk) {
+          right: auto;
+          left: 300px;
+        }
+      }
+      .mapLocation {
+        position: absolute;
+        left: 18px;
+        bottom: 0;
+        height: auto;
+
+        @include onlyIn(mob) {
+          width: 100px;
+        }
+        @include onlyIn(desk) {
+          width: 150px;
+        }
+      }
+    }
+
+    .col02 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      @include onlyIn(mob) {
+        height: 60%;
+        width: 100%;
+      }
+      @include onlyIn(desk) {
+        height: auto;
+        width: 50%;
+      }
+
+      .productosLocation {
+        z-index: 10;
+        height: auto;
+
+        @include onlyIn(mob) {
+          width: 65%;
+          margin-left: 2rem;
+        }
+        @include onlyIn(desk) {
+          width: 50%;
+          margin-left: 5rem;
+        }
+      }
+
+      .rectangleShowMore {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+
+        @include onlyIn(mob) {
+          width: 110vw;
+        }
+        @include onlyIn(desk) {
+          width: 80vh;
+        }
+      }
+    }
+  }
+
+  /* quinta seccion */
+
+  .containerSocial {
+    width: 100%;
+    margin: 5rem 0;
+    background: radial-gradient(100% 292.51% at 82.67% 100%, #8A2C3D 0%, #8B2D3F 26.69%, #A52B5E 52.44%, #323098 80.19%, #333199 91.67%);
+
+  }
+
+  .rowGlobalSocial {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+
+    h3 {
+      color: white;
+      font-weight: 500;
+      padding: 0 1rem;
+      margin: 1rem 0;
+
+      @include onlyIn(mob) {
+        font-size: 30px;
+      }
+      @include onlyIn(desk) {
+        font-size: 60px;
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #0383CE -0.69%, #A9FD55 34.44%, #FFE769 70.11%, #FFA944 99.48%);
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+
+      svg {
+        fill: white;
+
+        @include onlyIn(mob) {
+          width: 60px;
+          height: 60px;
+        }
+        @include onlyIn(desk) {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+      }
+    }
+  }
+
+  /* sexta seccion */
+
+  .containerPosts {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    h3 {
+      font-weight: 300;
+      margin: .5rem 0;
+
+      @include onlyIn(mob) {
+        font-size: 35px;
+      }
+      @include onlyIn(desk) {
+        font-size: 75px;
+      }
+    }
+    p {
+      font-weight: 300;
+      text-align: justify;
+
+      @include onlyIn(mob) {
+        font-size: 18px;
+      }
+      @include onlyIn(desk) {
+        font-size: 25px;
+      }
+    }
+    
+  }
+
+  .rowGlobalPost {
+    display: flex;
+    height: 100%;
+    column-gap: 2rem;
+    
+    @include onlyIn(mob) {
+      flex-direction: column;
+    }
+    @include onlyIn(desk) {
+      flex-direction: row;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+
+      @include onlyIn(mob) {
+        width: 100%;
+      }
+      @include onlyIn(desk) {
+        width: 33.3%;
+      }
+
+      .cardImg {
+        position: relative;
+        width: 100%;
+
+        img{
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 30px;
+          aspect-ratio: 1 / 1;
+        }
+        svg {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .cardBody {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        text-align: center;
+        height: 100%;
+        align-items: center;
+
+        p {
+          text-align: justify;
+          font-weight: 400;
+          margin-bottom: 2px;
+          
+          @include onlyIn(mob) {
+            font-size: 16px;
+          }
+          @include onlyIn(desk) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      svg {
+        width: 80px;
+        height: 80px;
+        fill: white;
+      }
+    }
+  }
+
+  /* setima seccion */
+
+  .containerNewPosts {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    h3 {
+      font-weight: 300;
+      margin: .5rem 0;
+
+      @include onlyIn(mob) {
+        font-size: 35px;
+      }
+      @include onlyIn(desk) {
+        font-size: 75px;
+      }
+    }
+  }
+
+  .rowGlobalNewPost {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    column-gap: 5rem;
+    row-gap: 1rem;
+    
+    @include onlyIn(mob) {
+      flex-direction: column;
+    }
+    @include onlyIn(desk) {
+      flex-direction: row;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+
+      @include onlyIn(mob) {
+        width: 100%;
+      }
+      @include onlyIn(desk) {
+        width: 50%;
+      }
+
+      .cardImg {
+        position: relative;
+        width: 100%;
+
+        img{
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          aspect-ratio: 1 / 1;
+        }
+        svg {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .cardBody {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        text-align: center;
+        height: 100%;
+        column-gap: 1rem;
+        border: 1px solid black;
+
+        .iconContainer {
+          display: flex;
+          align-items: center;
+          width: 20%;
+
+          svg {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        h6 {
+          text-align: justify;
+          font-weight: 500;
+          color: $colorBlueSecondary;
+          margin: 2px 0;
+
+          @include onlyIn(mob) {
+            font-size: 16px;
+          }
+          @include onlyIn(desk) {
+            font-size: 20px;
+          }
+        }
+        p {
+          text-align: justify;
+          font-weight: 400;
+          margin: 2px 0;
+          
+          @include onlyIn(mob) {
+            font-size: 16px;
+          }
+          @include onlyIn(desk) {
+            font-size: 20px;
+          }
+        }
+        
+      }
+    }
+  }
+
+  /* octava seccion */
+
+  .containerComments {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    .card {
+      padding: 2rem;
+      border-radius: 20px;
+      border: 5px solid;
+      border-image: linear-gradient(90deg, #0383CE -0.69%, #A9FD55 34.44%, #FFE769 70.11%, #FFA944 99.48%);
+      border-image-slice: 1; /* Ajusta según sea necesario */
+
+      .head {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        
+        .col02 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        p {
+          font-weight: 700;
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+      .description {
+        span:nth-child(1) {
+          color: #BCBCBC;
+          display: block;
+          margin-bottom: .5rem;
+          font-size: 17px;
+        }
+        span:nth-child(2) {
+          font-weight: 600;
+          color: #787878;
+          display: inline-block;
+          margin-bottom: .5rem;
+          font-size: 17px;
+        }
+        span:nth-child(3) {
+          font-weight: 600;
+          color: #CB0000;
+          display: inline-block;
+          margin-bottom: .5rem;
+          font-size: 17px;
+        }
+      }
+      .comment {
+        p {
+          text-align: justify;
+          font-weight: 600;
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
+
+
+
+

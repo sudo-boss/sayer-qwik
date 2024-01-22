@@ -1,0 +1,39 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.button {
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.bgBtnBluePrimary {
+  background-color: $colorBluePrimary;
+
+  &:hover {
+    background-color: darken($colorBluePrimary, 10%);
+  }
+}
+
+.bgBtnBlueSecondary {
+  background-color: $colorBlueSecondary;
+
+  &:hover {
+    background-color: darken($colorBlueSecondary, 10%);
+  }
+}
+
+.bgBtnOrangeSecondary {
+  background-color: $colorOrangePrimary;
+  
+  &:hover {
+    background-color: darken($colorOrangePrimary, 10%);
+  }
+}
