@@ -3,12 +3,8 @@ import { component$ } from '@builder.io/qwik';
 import { Button } from 'src/common/Button/Button';
 // ---Styles
 import style from './Home.module.scss';
-import RectangleBluePrimary from '../../../public/images/rectangleBluePrimary.svg?jsx';
-import RectangleBlueSecondary from '../../../public/images/rectangleBlueSecondary.svg?jsx';
 import RectangleGreen from '../../../public/images/rectangleGreen.svg?jsx';
-import Rectanglelocation from '/public/images/rectanglelocation.svg';
-import PinturasBanner from '/public/images/pinturasBanner.webp?jsx';
-import Pintura01 from '/public/images/pintura01.png?jsx';
+import Rectanglelocation from '/images/RectangleLocation.svg';
 
 import ProductosLocation from '/public/images/ProductosLocation.webp?jsx';
 import MapLocation from '/public/images/MapLocation.webp?jsx';
@@ -21,6 +17,7 @@ import TwitterIcon from '/public/images/twitterIcon.svg?jsx';
 
 /* posts */
 import Post01 from '/public/images/post01.png?jsx';
+import Pintura01 from '/public/images/home/ProductSlider/pintura01.png?jsx';
 
 /* new posts */
 import InstagramColor from '/public/images/instagramColor.svg?jsx';
@@ -30,6 +27,8 @@ import NewPosts from '/public/images/newPosts.png?jsx';
 /* comments */
 import Star from '/public/images/star.svg?jsx';
 import User from '/public/images/user.svg?jsx';
+import { PromoBanner } from './PromoBanner/PromoBanner';
+import { ProductSlider } from './ProductSlider/ProductSlider';
 
 /**
  * Home Component:  Descripción del comportamiento...
@@ -41,20 +40,8 @@ export const Home = component$(() => {
   // -----------------------RENDER
   return (
     <div class={style.Home}>
-      <div class={style.containerBanner}>
-        <div class={`${style.rowGlobalBanner || ''} ${style.container || ''}`}>
-          <div class="col01">
-            <p>20 %</p>
-            <p>de descuento</p>
-            <a href="#">Comprar ahora</a>
-          </div>
-          <div class="col02">
-            <RectangleBluePrimary class={style.rectangleBluePrimary} />
-            <RectangleBlueSecondary class={style.rectangleBlueSecondary} />
-            <PinturasBanner class="pinturasBanner" />
-          </div>
-        </div>
-      </div>
+      <PromoBanner />
+      <ProductSlider />
 
       <div class={style.containerProducts}>
         <div class={style.rowGlobalProducts}>
@@ -77,7 +64,7 @@ export const Home = component$(() => {
             <Button text="Ver mas" classCustom="bgBtnBlueSecondary" borderRadius="5px" />
           </div>
           <div class="col02">
-            <Pintura01 class="pinturaShowMore" />
+            {/* <Pintura01 class="pinturaShowMore" /> */}
             <RectangleGreen class={style.rectangleShowMore} />
           </div>
         </div>

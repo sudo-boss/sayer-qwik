@@ -1,0 +1,24 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.PromoBanner {
+  font-family: "Inter";
+  text-align: center;
+  font-weight: 600;
+  section {
+    width: 100%;
+  }
+  img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    box-shadow: 5px 2px 5px 2px #000;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }
