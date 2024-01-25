@@ -8,7 +8,26 @@
   padding: 0;
 
   .ProductSlider {
-    margin-top: 25px;
+    margin: 30px auto;
+  }
+
+  .marginBanner {
+    @include onlyIn(desk) {
+      width: 90%;
+    }
+    @include onlyIn(mob) {
+      width: 94%;
+    }
+    margin: 25px auto 0 auto;
+    max-width: 1350px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .SocialBanner {
+    margin-top: 35px;
   }
 
   .containerBanner {

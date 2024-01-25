@@ -3,21 +3,16 @@ import { component$ } from '@builder.io/qwik';
 import { Button } from 'src/common/Button/Button';
 // ---Styles
 import style from './Home.module.scss';
-import RectangleGreen from '../../../public/images/rectangleGreen.svg?jsx';
-import Rectanglelocation from '/images/RectangleLocation.svg';
-
-import ProductosLocation from '/public/images/ProductosLocation.webp?jsx';
-import MapLocation from '/public/images/MapLocation.webp?jsx';
+import AllProducts from '/public/images/home/TodosLosProductos.png?jsx';
+import Locations from '/public/images/home/Ubicaciones.png?jsx';
 
 /* icons social media */
 import FacebookIcon from '/public/images/facebookIcon.svg?jsx';
 import InstagramIcon from '/public/images/instagramIcon.svg?jsx';
-import YoutubeIcon from '/public/images/youtubeIcon.svg?jsx';
 import TwitterIcon from '/public/images/twitterIcon.svg?jsx';
 
 /* posts */
 import Post01 from '/public/images/post01.png?jsx';
-import Pintura01 from '/public/images/home/ProductSlider/pintura01.png?jsx';
 
 /* new posts */
 import InstagramColor from '/public/images/instagramColor.svg?jsx';
@@ -29,6 +24,7 @@ import Star from '/public/images/star.svg?jsx';
 import User from '/public/images/user.svg?jsx';
 import { PromoBanner } from './PromoBanner/PromoBanner';
 import { ProductSlider } from './ProductSlider/ProductSlider';
+import { SocialBanner } from './SocialBanner/SocialBanner';
 
 /**
  * Home Component:  Descripción del comportamiento...
@@ -42,74 +38,13 @@ export const Home = component$(() => {
     <div class={style.Home}>
       <PromoBanner />
       <ProductSlider />
-
-      <div class={style.containerProducts}>
-        <div class={style.rowGlobalProducts}>
-          <div class="col">
-            <div class="row">
-              <div class="tagDiscount">-10%</div>
-              <Pintura01 />
-              <p>Pintura roja</p>
-              <p>19 litros</p>
-              <Button text="Contactanos" classCustom="bgBtnBlueSecondary" borderRadius="20px" />
-            </div>
-          </div>
-        </div>
+      <div class="marginBanner">
+        <AllProducts />
       </div>
-
-      <div class={style.containerShowMore}>
-        <div class={`${style.rowGlobalShowMore || ''} ${style.container || ''}`}>
-          <div class="col01">
-            <h5>Los mejores colores para tu hogar</h5>
-            <Button text="Ver mas" classCustom="bgBtnBlueSecondary" borderRadius="5px" />
-          </div>
-          <div class="col02">
-            {/* <Pintura01 class="pinturaShowMore" /> */}
-            <RectangleGreen class={style.rectangleShowMore} />
-          </div>
-        </div>
+      <div class="marginBanner">
+        <Locations />
       </div>
-
-      <div class={style.containerLocation}>
-        <img src={Rectanglelocation} class="gradientlocation" width={600} height={600} alt="" />
-        <div class={`${style.rowGlobalLocation || ''} ${style.container || ''}`}>
-          <div class="col01">
-            <div class="containerCol">
-              <h5>Más productos</h5>
-              <h5>En nuestras </h5>
-              <h5>3 sucursales</h5>
-              <Button text="Ubicanos" classCustom="bgBtnOrangeSecondary" borderRadius="30px" />
-              <MapLocation class="mapLocation" />
-            </div>
-          </div>
-          <div class="col02">
-            <ProductosLocation class="productosLocation" />
-          </div>
-        </div>
-      </div>
-
-      <div class={style.containerSocial}>
-        <div class={`${style.rowGlobalSocial || ''} ${style.container || ''}`}>
-          <h3>
-            SIGUENOS EN <br /> REDES SOCIALES
-          </h3>
-          <div class={style.line}></div>
-          <div class={style.row}>
-            <div class="col">
-              <FacebookIcon />
-            </div>
-            <div class="col">
-              <TwitterIcon />
-            </div>
-            <div class="col">
-              <InstagramIcon />
-            </div>
-            <div class="col">
-              <YoutubeIcon />
-            </div>
-          </div>
-        </div>
-      </div>
+      <SocialBanner />
 
       <div class={`${style.containerPosts || ''} ${style.container || ''}`}>
         <h3>

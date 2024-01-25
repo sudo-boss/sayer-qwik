@@ -23,7 +23,7 @@ export const ProductCard = component$<Props>(({ title, discount }) => {
       {discount ? <div class="tagDiscount">-{discount}%</div> : null}
       <Slot />
       <p>{title}</p>
-      <Button text="Contactanos" classCustom="bgBtnBlueSecondary" borderRadius="20px" />
+      <Button text="Detalles" classCustom="bgBtnBlueSecondary" borderRadius="20px" />
     </div>
   );
 });

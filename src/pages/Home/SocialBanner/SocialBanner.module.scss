@@ -1,0 +1,72 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.SocialBanner {
+  font-family: "Inter";
+  background: radial-gradient(
+    100% 292.51% at 82.67% 100%,
+    #8a2c3d 0%,
+    #8b2d3f 26.69%,
+    #a52b5e 52.44%,
+    #323098 80.19%,
+    #333199 91.67%
+  );
+  @include onlyIn(desk) {
+    padding: 55px 50px 20px 50px;
+  }
+  @include onlyIn(mob) {
+    padding: 15px 20px 10px 20px;
+  }
+
+  h3 {
+    color: white;
+    font-weight: 550;
+    padding: 0;
+    margin: 0;
+
+    @include onlyIn(mob) {
+      font-size: 34px;
+      text-align: center;
+    }
+    @include onlyIn(desk) {
+      font-size: 62px;
+      width: 43%;
+    }
+  }
+  .iconsContainer {
+    @include onlyIn(desk) {
+      width: 75%;
+      margin-top: 15px;
+      .ionicon {
+        margin: 15px auto;
+        font-size: 85px;
+      }
+    }
+    @include onlyIn(mob) {
+      margin: 12px auto 0 auto;
+      .ionicon {
+        margin: 8px auto;
+        font-size: 55px;
+      }
+    }
+    .ionicon {
+      color: white;
+      display: block;
+      &:hover {
+        color: #fab6c9;
+      }
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #0383ce -0.69%, #a9fd55 34.44%, #ffe769 70.11%, #ffa944 99.48%);
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }
