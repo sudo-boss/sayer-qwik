@@ -1,18 +1,9 @@
 // ---Dependencies
 import { component$ } from '@builder.io/qwik';
-import { Button } from 'src/common/Button/Button';
 // ---Styles
 import style from './Home.module.scss';
 import AllProducts from '/public/images/home/TodosLosProductos.png?jsx';
 import Locations from '/public/images/home/Ubicaciones.png?jsx';
-
-/* icons social media */
-import FacebookIcon from '/public/images/facebookIcon.svg?jsx';
-import InstagramIcon from '/public/images/instagramIcon.svg?jsx';
-import TwitterIcon from '/public/images/twitterIcon.svg?jsx';
-
-/* posts */
-import Post01 from '/public/images/post01.png?jsx';
 
 /* new posts */
 import InstagramColor from '/public/images/instagramColor.svg?jsx';
@@ -40,61 +31,17 @@ export const Home = component$(() => {
       <PromoBanner />
       <ProductSlider />
       <div class="marginBanner">
-        <AllProducts />
+        <a href="/products">
+          <AllProducts />
+        </a>
       </div>
       <div class="marginBanner">
-        <Locations />
+        <a href="/locations">
+          <Locations />
+        </a>
       </div>
       <SocialBanner />
       <ComoHacerlo />
-
-      <div class={`${style.containerPosts || ''} ${style.container || ''}`}>
-        <h3>
-          Como <br /> hacerlo...
-        </h3>
-        <p>
-          Visite nuestra sección de instrucciones para obtener asesoramiento experto y paso a paso
-          sobre su próximo proyecto o consulte nuestras redes sociales para mas post interesantes
-        </p>
-        <div class={style.rowGlobalPost}>
-          <div class="card">
-            <div class="cardImg">
-              <Post01 />
-              <FacebookIcon />
-            </div>
-            <div class="cardBody">
-              <p>
-                Aprenda los conceptos basicos del producto, la preparacion y el precio para
-                transformar cualquier habitacion de su hogar
-              </p>
-              <Button text="Ver post" classCustom="bgBtnOrangeSecondary" borderRadius="30px" />
-            </div>
-          </div>
-          <div class="card">
-            <div class="cardImg">
-              <Post01 />
-              <InstagramIcon />
-            </div>
-            <div class="cardBody">
-              <p>Cree un aspecto unico y duradero para las superficies de concreto de su hogar</p>
-              <Button text="Ver post" classCustom="bgBtnOrangeSecondary" borderRadius="30px" />
-            </div>
-          </div>
-          <div class="card">
-            <div class="cardImg">
-              <Post01 />
-              <TwitterIcon />
-            </div>
-            <div class="cardBody">
-              <p>
-                Aprenda por que la preparacion es el secreto de cualquier gran proyecto de pintura
-                exterior. Y como un poco de tiempo extra al comienzo dara sus frutos
-              </p>
-              <Button text="Ver post" classCustom="bgBtnOrangeSecondary" borderRadius="30px" />
-            </div>
-          </div>
-        </div>
-      </div>
 
       <div class={`${style.containerPosts || ''} ${style.container || ''}`}>
         <h3>

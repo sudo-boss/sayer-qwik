@@ -2,6 +2,33 @@
 import { component$ } from '@builder.io/qwik';
 // ---Styles
 import style from './ComoHacerlo.module.scss';
+import { Mcol, Mrow } from 'qwik-forge-grid';
+
+import ImgPost1 from '/public/images/home/ComoHacerlo/post1.png?jsx';
+import ImgPost2 from '/public/images/home/ComoHacerlo/post2.png?jsx';
+import ImgPost3 from '/public/images/home/ComoHacerlo/post3.png?jsx';
+import { PostCard } from './PostCard/PostCard';
+import { basicResponsiveMD } from 'src/utils/functions/responsiveUtils';
+
+const posts = [
+  {
+    prevText:
+      'Aprenda los conceptos basicos del producto, la preparacion y el precio para transformar cualquier habitacion de su hogar',
+    url: '/post',
+    Image: ImgPost1,
+  },
+  {
+    prevText: 'Cree un aspecto unico y duradero para las superficies de concreto de su hogar',
+    url: '/post',
+    Image: ImgPost2,
+  },
+  {
+    prevText:
+      'Aprenda por que la preparacion es el secreto de cualquier gran proyecto de pintura exterior. Y como un poco de tiempo extra al comienzo dara sus frutos',
+    url: '/post',
+    Image: ImgPost3,
+  },
+];
 
 /**
  * ComoHacerlo Component:  Descripción del comportamiento...
@@ -18,6 +45,15 @@ export const ComoHacerlo = component$(() => {
         Visite nuestra sección de instrucciones para obtener asesoramiento experto y paso a paso
         sobre su próximo proyecto o consulte nuestras redes sociales para mas post interesantes.
       </p>
+      <Mrow>
+        {posts.map(({ Image, prevText, url }, i) => (
+          <Mcol key={`PostCard-${i}`} {...basicResponsiveMD(33)}>
+            <PostCard prevText={prevText} url={url}>
+              <Image />
+            </PostCard>
+          </Mcol>
+        ))}
+      </Mrow>
     </div>
   );
 });

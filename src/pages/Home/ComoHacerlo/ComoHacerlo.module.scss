@@ -4,8 +4,7 @@
 
 .ComoHacerlo {
   font-family: "Inter";
-  background-color: aqua;
-  padding: 25px 55px 25px 55px;
+  padding: 25px 55px 25px 45px;
   h3 {
     @include onlyIn(desk) {
       width: 300px;
@@ -20,6 +19,11 @@
     font-size: 24px;
     line-height: 24px;
     font-weight: 250;
+  }
+  .forge-mcol-element {
+    @include onlyIn(mob) {
+      margin-top: 20px;
+    }
   }
 }
 

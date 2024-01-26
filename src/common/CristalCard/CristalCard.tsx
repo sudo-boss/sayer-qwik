@@ -8,6 +8,8 @@ interface Props {
   height?: number | string;
   padding?: number;
   class?: string;
+  /** balue between 0 and 1 */
+  transparency?: number;
 }
 
 /**
@@ -15,7 +17,7 @@ interface Props {
  * @param {Props} props - Parámetros del componente como: ...
  */
 export const CristalCard = component$<Props>(
-  ({ height, width = '100%', padding, class: className = '' }) => {
+  ({ height, width = '100%', padding, class: className = '', transparency = 0.275 }) => {
     // -----------------------CONSTS, HOOKS, STATES
     const { adjustedHeight, adjustedWidth, top, left } = getAdjustedValues();
 
@@ -29,7 +31,8 @@ export const CristalCard = component$<Props>(
       width: adjustedWidth,
       height: adjustedHeight,
       borderRadius: '8px',
-      backgroundColor: 'rgba(75, 70, 70, 0.275)',
+      // backgroundColor: 'rgba(75, 70, 70, 0.275)',
+      backgroundColor: `rgba(75, 70, 70, ${transparency})`,
       filter: 'blur(14px)',
       position: 'absolute',
       top: top,
@@ -66,11 +69,7 @@ export const CristalCard = component$<Props>(
     // -----------------------RENDER
     return (
       <div class={`${style['CristalCard'] || ''} ${className}`} style={cardStyles}>
-        <div class="glass" style={pseudoElementStyles}>
-          <div class="fakeSlot">
-            <Slot />
-          </div>
-        </div>
+        <div class="glass" style={pseudoElementStyles} />
         <Slot />
       </div>
     );

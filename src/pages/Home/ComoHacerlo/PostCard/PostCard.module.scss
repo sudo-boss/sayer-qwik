@@ -1,0 +1,30 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.PostCard {
+  font-family: "Inter";
+  margin: 0px auto;
+  text-align: center;
+  @include onlyIn(desk) {
+    height: 100%;
+  }
+
+  p {
+    @include limitTextLines(3);
+    font-size: 18px;
+    font-weight: 400;
+  }
+  img {
+    border-radius: 15px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }

@@ -21,6 +21,7 @@
     @include onlyIn(mob) {
       width: 94%;
     }
+    display: block;
     margin: 25px auto 0 auto;
     max-width: 1350px;
     img {
