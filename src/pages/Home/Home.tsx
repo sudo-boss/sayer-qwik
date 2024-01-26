@@ -25,6 +25,7 @@ import User from '/public/images/user.svg?jsx';
 import { PromoBanner } from './PromoBanner/PromoBanner';
 import { ProductSlider } from './ProductSlider/ProductSlider';
 import { SocialBanner } from './SocialBanner/SocialBanner';
+import { ComoHacerlo } from './ComoHacerlo/ComoHacerlo';
 
 /**
  * Home Component:  Descripción del comportamiento...
@@ -45,6 +46,7 @@ export const Home = component$(() => {
         <Locations />
       </div>
       <SocialBanner />
+      <ComoHacerlo />
 
       <div class={`${style.containerPosts || ''} ${style.container || ''}`}>
         <h3>

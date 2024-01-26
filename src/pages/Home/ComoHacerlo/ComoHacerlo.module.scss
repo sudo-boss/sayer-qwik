@@ -1,0 +1,26 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.ComoHacerlo {
+  font-family: "Inter";
+  background-color: aqua;
+  padding: 25px 55px 25px 55px;
+  h3 {
+    @include onlyIn(desk) {
+      width: 300px;
+      font-size: 55px;
+      font-weight: 300;
+      line-height: 55px;
+    }
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 250;
+  }
+}
+
+// // desk mov xs sm md lg xl xxl

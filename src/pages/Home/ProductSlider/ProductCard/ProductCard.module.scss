@@ -3,26 +3,6 @@
 @import "/src/styles/utils";
 
 .ProductCard {
-  font-family: "Inter";
-  width: 220px;
-  text-align: center;
-  margin: 0px auto;
-  position: relative;
-
-  // ---shadow card
-  &::before {
-    content: "";
-    height: 375px;
-    width: 230px;
-    border-radius: 8px;
-    background-color: rgba(123, 119, 119, 0.2);
-    filter: blur(2px);
-    position: absolute;
-    top: 0;
-    left: 0px;
-    z-index: -1;
-  }
-
   .tagDiscount {
     background-color: #ff0000;
     color: $colorLight1;
