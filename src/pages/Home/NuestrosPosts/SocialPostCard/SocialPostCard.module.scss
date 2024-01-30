@@ -1,0 +1,38 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.SocialPostCard {
+  font-family: "Inter";
+  border: 1px solid $colorDark6;
+  border-radius: 8px;
+  width: 94%;
+  margin: auto;
+  background-color: #fff;
+  @include onlyIn(mob) {
+    margin-top: 20px;
+  }
+
+  .post {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  svg {
+    display: block;
+    margin: auto;
+  }
+  h4 {
+    color: #0383ce;
+    font-size: 18px;
+  }
+  p {
+    color: $colorDark2;
+    font-weight: 300;
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }
