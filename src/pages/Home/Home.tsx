@@ -13,6 +13,7 @@ import { ProductSlider } from './ProductSlider/ProductSlider';
 import { SocialBanner } from './SocialBanner/SocialBanner';
 import { ComoHacerlo } from './ComoHacerlo/ComoHacerlo';
 import { NuestrosPosts } from './NuestrosPosts/NuestrosPosts';
+import { ReviewsCard } from './ReviewsCard/ReviewsCard';
 
 /**
  * Home Component:  Descripción del comportamiento...
@@ -39,39 +40,7 @@ export const Home = component$(() => {
       <SocialBanner />
       <ComoHacerlo />
       <NuestrosPosts />
-
-      {/* <div class={`${style.containerComments || ''} ${style.container || ''}`}>
-        <div class="card">
-          <div class="head">
-            <div class="col01">
-              <User />
-            </div>
-            <div class="col02">
-              <p>Pedro Navajas C.</p>
-              <div>
-                <Star />
-                <Star />
-                <Star />
-                <Star />
-                <Star />
-              </div>
-            </div>
-          </div>
-          <div class="description">
-            <span>Publicado el 21 de septiembre de 2023</span>
-            <span>Pintura color: negro | </span>
-            <span> Compra verificada</span>
-          </div>
-          <div class="comment">
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Tellus faucibus morbi id vel sed vitae lorem
-              orci scelerisque. Augue cras ut eget tortor scelerisque. Magna lacus sapien integer
-              nisi ipsum. Ipsum at malesuada arcu malesuada adipiscing sagittis nibh gravida. Dui
-              aliquam dui pellentesque sem faucibus interdum aliquet posuere.
-            </p>
-          </div>
-        </div>
-      </div> */}
+      <ReviewsCard />
     </div>
   );
 });

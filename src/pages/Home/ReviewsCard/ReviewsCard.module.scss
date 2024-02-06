@@ -1,0 +1,76 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.ReviewsCard {
+  font-family: "Inter";
+  position: relative;
+  padding: 15px;
+  margin: auto;
+  border-radius: 20px;
+  width: 88%;
+  z-index: 1;
+  border: solid 5px transparent;
+  animation: borderAnimation 8s linear infinite; /* Ajustar la duración y otros parámetros de animación según sea necesario */
+
+  /* Usar onlyIn mixin para responsividad */
+  @include onlyIn(mob) {
+    width: 82%;
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+  .stars {
+    margin-top: 10px;
+  }
+
+  .date {
+    color: #9a9a9a;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .verified {
+    color: #cb0000;
+    font-size: 16px;
+  }
+
+  .arrows {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 35px;
+    color: #ffa41c;
+  }
+}
+
+/* Definir la animación para cambiar los colores del borde */
+@keyframes borderAnimation {
+  0%,
+  100% {
+    background-color: rgba(3, 132, 206, 0.2);
+    border-color: #0383ce;
+  }
+  25% {
+    background-color: rgb(169, 253, 85, 0.2);
+    border-color: #a9fd55;
+  }
+  50% {
+    background-color: rgb(255, 231, 105, 0.2);
+    border-color: #ffe769;
+  }
+  75% {
+    background-color: rgb(255, 169, 68, 0.2);
+    border-color: #ffa944;
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }
