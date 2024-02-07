@@ -1,0 +1,18 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.LogoLink {
+  font-family: "Inter";
+  padding: 10px 0px;
+  text-align: center;
+  img {
+    width: 170px;
+    height: auto;
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }

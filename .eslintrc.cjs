@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   rules: {
+    '@typescript-eslint/restrict-template-expressions': 'off',
     '@typescript-eslint/no-misused-promises': 'warn',
     '@typescript-eslint/no-unsafe-return': 'warn',
     '@typescript-eslint/require-await': 'off',

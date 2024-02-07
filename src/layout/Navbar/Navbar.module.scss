@@ -3,23 +3,42 @@
 @import "/src/styles/utils";
 
 .Navbar {
-  font-family: "Inter";
-  background-color: $colorPurple5;
-  display: grid;
-  align-items: center;
-  @include onlyIn(desk) {
-    height: $headerHeight;
+  background: #eaeaea;
+
+  // Necesarias para barrita animada
+  position: relative;
+
+  // Maqueta y posicionamiento barrita gradiente
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
   }
-  @include onlyIn(mob) {
-    height: $headerHeightMobile;
+
+  // 2 barritas gradientes superpuestas intercambiando opacidad
+  &::before {
+    background-image: linear-gradient(90deg, #0383ce -0.69%, #a9fd55 34.44%, #ffe769 70.11%, #ffa944 99.48%);
+    z-index: 1;
   }
-  a {
-    padding: 10px 0;
-    text-align: center;
-    display: block;
+  &::after {
+    background-image: linear-gradient(90deg, #ffa944 -0.69%, #ffe769 34.44%, #0383ce 70.11%, #a9fd55 99.48%);
+    z-index: 2;
+    animation: bottomAnimation 4s linear infinite;
+    opacity: 0;
   }
-  a:first-child {
-    text-align: start;
-    padding-left: 10px;
+}
+
+@keyframes bottomAnimation {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
   }
 }
