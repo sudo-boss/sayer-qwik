@@ -6,8 +6,8 @@ import { Fcol, Frow } from 'qwik-forge-grid';
 import { basicResponsive, customResponsive } from 'src/utils/functions/responsiveUtils';
 import { LuChevronRight, LuChevronLeft } from '@qwikest/icons/lucide';
 
-import User from '/public/images/user.svg?jsx';
-import Star from '/public/images/star.svg?jsx';
+import User from '/public/images/home/ReviewsCard/user.svg?jsx';
+import Star from '/public/images/home/ReviewsCard/star.svg?jsx';
 
 /**
  * ReviewsCard Component:  Descripción del comportamiento...
@@ -23,7 +23,7 @@ export const ReviewsCard = component$(() => {
         <Fcol {...basicResponsive(60)}>
           <Frow vAlign="middle">
             <Fcol {...customResponsive(15, 25)}>
-              <User />
+              <User class="user" />
             </Fcol>
             <Fcol {...customResponsive(85, 75)}>
               <p class="title">Pedro Navajas C.</p>

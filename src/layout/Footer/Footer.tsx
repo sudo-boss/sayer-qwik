@@ -2,7 +2,7 @@
 import { component$ } from '@builder.io/qwik';
 // ---Styles
 import style from './Footer.module.scss';
-import VectorFooter from '/public/images/VectorFooter.svg?jsx';
+import VectorFooter from '/public/images/layout/footer/VectorFooter.svg?jsx';
 
 /**
  * Footer Component:  Descripción del comportamiento...

@@ -4,7 +4,7 @@
 
 .SocialPostCard {
   font-family: "Inter";
-  border: 1px solid $colorDark6;
+  border: 1px solid $colorDark3;
   border-radius: 8px;
   width: 94%;
   margin: auto;
@@ -21,6 +21,15 @@
   svg {
     display: block;
     margin: auto;
+    height: auto;
+    @include onlyIn(desk) {
+      width: 70%;
+      max-width: 70px;
+    }
+    @include onlyIn(mob) {
+      width: 85%;
+      max-width: 70px;
+    }
   }
   h4 {
     color: #0383ce;
