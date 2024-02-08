@@ -5,9 +5,6 @@ import style from './Home.module.scss';
 import AllProducts from '/public/images/home/TodosLosProductos.png?jsx';
 import Locations from '/public/images/home/Ubicaciones.png?jsx';
 
-/* comments */
-import Star from '/public/images/star.svg?jsx';
-import User from '/public/images/user.svg?jsx';
 import { PromoBanner } from './PromoBanner/PromoBanner';
 import { ProductSlider } from './ProductSlider/ProductSlider';
 import { SocialBanner } from './SocialBanner/SocialBanner';
