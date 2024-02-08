@@ -9,6 +9,8 @@ import ImgPost2 from '/public/images/home/ComoHacerlo/post2.png?jsx';
 import ImgPost3 from '/public/images/home/ComoHacerlo/post3.png?jsx';
 import { PostCard } from './PostCard/PostCard';
 import { basicResponsiveMD } from 'src/utils/functions/responsiveUtils';
+import { ScrollAnimate } from 'src/common/ScrollAnimate/ScrollAnimate';
+import { useFStore } from 'src/store/config/storeConfig';
 
 const posts = [
   {
@@ -35,6 +37,7 @@ const posts = [
  */
 export const ComoHacerlo = component$(() => {
   // -----------------------CONSTS, HOOKS, STATES
+  const { state } = useFStore();
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER
@@ -48,9 +51,14 @@ export const ComoHacerlo = component$(() => {
       <Mrow>
         {posts.map(({ Image, prevText, url }, i) => (
           <Mcol key={`PostCard-${i}`} {...basicResponsiveMD(33)}>
-            <PostCard prevText={prevText} url={url}>
-              <Image />
-            </PostCard>
+            <ScrollAnimate
+              always={!state.appInfo.isMobile}
+              delay={state.appInfo.isMobile ? i * 100 : i * 500}
+            >
+              <PostCard prevText={prevText} url={url}>
+                <Image />
+              </PostCard>
+            </ScrollAnimate>
           </Mcol>
         ))}
       </Mrow>

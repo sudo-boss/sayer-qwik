@@ -1,0 +1,21 @@
+@import "/src/styles/variables";
+@import "/src/styles/animations";
+@import "/src/styles/utils";
+
+.ScrollAnimate {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-10%);
+  transition: all 0.75s;
+
+  &-show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0);
+  }
+}
+
+// // desk mov xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }

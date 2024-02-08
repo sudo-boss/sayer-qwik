@@ -24,7 +24,7 @@ export const PostCard = component$<Props>(({ prevText, url }) => {
   return (
     <CristalCard
       class={style['PostCard']}
-      width={state.appInfo.isMobile ? 280 : 320}
+      width={state.appInfo.isMobile ? 240 : 320}
       padding={15}
       transparency={0.14}
     >
