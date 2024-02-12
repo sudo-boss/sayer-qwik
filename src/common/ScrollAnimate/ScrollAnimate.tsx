@@ -31,10 +31,8 @@ export const ScrollAnimate = component$<Props>(({ always = false, delay = 0, dis
         const entry = entries[0];
         if (entry?.isIntersecting) {
           classNames.value = `${style.ScrollAnimate} ${style.ScrollAnimate}-show`;
-        } else {
-          if (always) {
-            classNames.value = style.ScrollAnimate;
-          }
+        } else if (always) {
+          classNames.value = style.ScrollAnimate;
         }
       },
       {

@@ -2,10 +2,6 @@
 import { component$ } from '@builder.io/qwik';
 // ---Styles
 import style from './Home.module.scss';
-import AllProductsDesktop from '/public/images/home/LosMejoresColores.png?jsx';
-import AllProductsMobile from '/public/images/home/LosMejoresColoresMobile.png?jsx';
-import LocationsDesktop from '/public/images/home/ubicanos.png?jsx';
-import LocationsMobile from '/public/images/home/UbicacionMovile.png?jsx';
 
 import { PromoBanner } from './PromoBanner/PromoBanner';
 import { ProductSlider } from './ProductSlider/ProductSlider';
@@ -14,6 +10,8 @@ import { ComoHacerlo } from './ComoHacerlo/ComoHacerlo';
 import { NuestrosPosts } from './NuestrosPosts/NuestrosPosts';
 import { ReviewsCard } from './ReviewsCard/ReviewsCard';
 import { useFStore } from 'src/store/config/storeConfig';
+import { AllProductsBanner } from './AllProductsBanner/AllProductsBanner';
+import { LocationsBanner } from './LocationsBanner/LocationsBanner';
 
 /**
  * Home Component:  Descripción del comportamiento...
@@ -21,25 +19,17 @@ import { useFStore } from 'src/store/config/storeConfig';
  */
 export const Home = component$(() => {
   // -----------------------CONSTS, HOOKS, STATES
-  const { state } = useFStore()
+  const { state } = useFStore();
   // -----------------------RENDER
   return (
     <div class={style.Home}>
-      <PromoBanner />
-      <ProductSlider />
-      <div class="marginBanner">
-        <a href="/products">
-        {state.appInfo.isMobile ? <AllProductsMobile /> : <AllProductsDesktop />}
-        </a>
-      </div>
-      <div class="marginBanner">
-        <a href="/locations">
-          {state.appInfo.isMobile ? <LocationsMobile /> : <LocationsDesktop />}
-        </a>
-      </div>
+      <PromoBanner isMobile={state.appInfo.isMobile} />
+      <ProductSlider winSize={state.appInfo.winSize} />
+      <AllProductsBanner isMobile={state.appInfo.isMobile} />
+      <LocationsBanner isMobile={state.appInfo.isMobile} />
       <SocialBanner />
-      <ComoHacerlo />
-      <NuestrosPosts />
+      <ComoHacerlo isMobile={state.appInfo.isMobile} />
+      <NuestrosPosts isMobile={state.appInfo.isMobile} />
       <ReviewsCard />
     </div>
   );

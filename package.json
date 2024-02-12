@@ -7,8 +7,7 @@
   "private": true,
   "scripts": {
     "_0": "-----------------------------MAIN LOCAL------------------------------------------",
-    "start": "vite --open --mode ssr",
-    "dev": "vite --mode ssr",
+    "dev": "vite --open --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "preview": "qwik build preview && vite preview --open",
     "_1": "-----------------------------PROD SCRIPTS------------------------------------------",

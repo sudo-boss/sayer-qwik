@@ -6,7 +6,7 @@ import Pintura01 from '/public/images/home/ProductSlider/bote01.png?jsx';
 import { Fcol, Frow } from 'qwik-forge-grid';
 import { customResponsive } from 'src/utils/functions/responsiveUtils';
 import { BsArrowLeftSquare, BsArrowRightSquare } from '@qwikest/icons/bootstrap';
-import { useFStore } from 'src/store/config/storeConfig';
+import type { IFStore } from 'src/store/config/storeConfig';
 
 const products = [
   { title: 'Pintura roja 19 litros', discount: 10, Image: Pintura01 },
@@ -18,14 +18,13 @@ const products = [
 /**
  * ProductSlider Component:  Descripción del comportamiento...
  */
-export const ProductSlider = component$(() => {
+export const ProductSlider = component$(({ winSize }: Pick<IFStore['appInfo'], 'winSize'>) => {
   // -----------------------CONSTS, HOOKS, STATES
-  const { state } = useFStore();
   const copy = productsBySize();
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   function productsBySize() {
-    switch (state.appInfo.winSize) {
+    switch (winSize) {
       case 'xs':
       case 'sm':
         return products.slice(0, 1);

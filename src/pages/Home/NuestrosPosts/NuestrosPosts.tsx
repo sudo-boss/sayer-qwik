@@ -5,15 +5,13 @@ import style from './NuestrosPosts.module.scss';
 import { Mcol, Mrow } from 'qwik-forge-grid';
 import { SocialPostCard } from './SocialPostCard/SocialPostCard';
 import { basicResponsiveMD } from 'src/utils/functions/responsiveUtils';
-import { useFStore } from 'src/store/config/storeConfig';
 import { ScrollAnimate } from 'src/common/ScrollAnimate/ScrollAnimate';
 
 /**
  * NuestrosPosts Component:  Descripción del comportamiento...
  */
-export const NuestrosPosts = component$(() => {
+export const NuestrosPosts = component$(({ isMobile }: { isMobile: boolean }) => {
   // -----------------------CONSTS, HOOKS, STATES
-  const { state } = useFStore();
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
   // -----------------------RENDER
@@ -32,7 +30,7 @@ export const NuestrosPosts = component$(() => {
           </ScrollAnimate>
         </Mcol>
         <Mcol {...basicResponsiveMD(50)}>
-          <ScrollAnimate delay={state.appInfo.isMobile ? 100 : 500}>
+          <ScrollAnimate delay={isMobile ? 100 : 500}>
             <SocialPostCard
               title="Pinturas_sayer"
               variant="ig"

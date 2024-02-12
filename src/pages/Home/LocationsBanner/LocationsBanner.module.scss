@@ -2,18 +2,20 @@
 @import "/src/styles/animations";
 @import "/src/styles/utils";
 
-.PromoBanner {
+.LocationsBanner {
   font-family: "Inter";
-  text-align: center;
-  font-weight: 600;
-  section {
-    width: 100%;
+  @include onlyIn(desk) {
+    width: 90%;
   }
+  @include onlyIn(mob) {
+    width: 94%;
+  }
+  display: block;
+  margin: 25px auto 0 auto;
+  max-width: 1378px;
   img {
     width: 100%;
-    max-width: 1378px;
     height: auto;
-    box-shadow: 5px 2px 5px 2px #797979;
   }
 }
 
