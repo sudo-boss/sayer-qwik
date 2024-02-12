@@ -2,7 +2,7 @@
 import { component$ } from '@builder.io/qwik';
 import { ProductCard } from './ProductCard/ProductCard';
 import style from './ProductSlider.module.scss';
-import Pintura01 from '/public/images/home/ProductSlider/pintura01.png?jsx';
+import Pintura01 from '/public/images/home/ProductSlider/bote01.png?jsx';
 import { Fcol, Frow } from 'qwik-forge-grid';
 import { customResponsive } from 'src/utils/functions/responsiveUtils';
 import { BsArrowLeftSquare, BsArrowRightSquare } from '@qwikest/icons/bootstrap';

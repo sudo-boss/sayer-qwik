@@ -6,7 +6,7 @@ import { Fcol, Frow } from 'qwik-forge-grid';
 
 import FacebookColor from '/public/images/home/NuestrosPosts/facebookColor.svg?jsx';
 import InstagramColor from '/public/images/home/NuestrosPosts/instagramColor.svg?jsx';
-import NewPost from '/public/images/home/NuestrosPosts/newPosts.png?jsx';
+import NewPost from '/public/images/home/NuestrosPosts/post.png?jsx';
 
 interface Props {
   title: string;

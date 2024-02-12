@@ -4,9 +4,9 @@ import { component$ } from '@builder.io/qwik';
 import style from './ComoHacerlo.module.scss';
 import { Mcol, Mrow } from 'qwik-forge-grid';
 
-import ImgPost1 from '/public/images/home/ComoHacerlo/post1.png?jsx';
-import ImgPost2 from '/public/images/home/ComoHacerlo/post2.png?jsx';
-import ImgPost3 from '/public/images/home/ComoHacerlo/post3.png?jsx';
+import ImgPost1 from '/public/images/home/ComoHacerlo/Blog1.png?jsx';
+import ImgPost2 from '/public/images/home/ComoHacerlo/Blog2.png?jsx';
+import ImgPost3 from '/public/images/home/ComoHacerlo/Blog3.png?jsx';
 import { PostCard } from './PostCard/PostCard';
 import { basicResponsiveMD } from 'src/utils/functions/responsiveUtils';
 import { ScrollAnimate } from 'src/common/ScrollAnimate/ScrollAnimate';
