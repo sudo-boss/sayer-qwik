@@ -2,8 +2,8 @@
 import { component$ } from '@builder.io/qwik';
 // ---Styles
 import style from './PromoBanner.module.scss';
-import BannerDesktop from '/public/images/home/banner1.png?jsx';
-import BannerMobile from '/public/images/home/banner1Mobile.png?jsx';
+import BannerDesktop from '/public/images/home/banner1Desk.png?jsx';
+import BannerMobile from '/public/images/home/banner1Mob.png?jsx';
 
 /**
  * PromoBanner Component:  Descripción del comportamiento...

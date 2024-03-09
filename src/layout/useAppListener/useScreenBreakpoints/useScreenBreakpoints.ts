@@ -17,5 +17,6 @@ export function useScreenBreakpoints() {
     const screenInfo = getScreen(windowSize.width);
     state.appInfo.isMobile = screenInfo.isMobile;
     state.appInfo.winSize = screenInfo.winSize;
+    state.appInfo.clientLoaded = true;
   });
 }

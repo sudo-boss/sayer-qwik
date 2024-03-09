@@ -1,10 +1,10 @@
-export const commitID = `74f3b3e0c010b29ff3a4b7e99a9cd830ea3c895a`;
+export const commitID = `c9f477c8d3f24874610137d0b2aeb9bed932311b`;
     
-  export const commitMssg = `Mejora de imagenes y se agregaron banners moviles`;
+  export const commitMssg = `ajuste deteccion dispositivos`;
   
-  export const commitDate = `Mon Feb 12 2024 15:31:24 GMT-0600 (hora estándar central)`;
+  export const commitDate = `Sat Mar 09 2024 14:18:59 GMT-0600 (Central Standard Time)`;
   
-  export const commitAuthor = `ianaxelsotomayorluna`;
+  export const commitAuthor = `sb`;
   
   export const commitBranch = `expected`;
     
