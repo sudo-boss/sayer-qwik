@@ -1,8 +1,8 @@
-export const commitID = `c9f477c8d3f24874610137d0b2aeb9bed932311b`;
+export const commitID = `2d6056bb9562701cf460859694f3aaebbaae5dc0`;
     
-  export const commitMssg = `ajuste deteccion dispositivos`;
+  export const commitMssg = `build error issues fixed`;
   
-  export const commitDate = `Sat Mar 09 2024 14:18:59 GMT-0600 (Central Standard Time)`;
+  export const commitDate = `Sat Mar 09 2024 14:24:10 GMT-0600 (Central Standard Time)`;
   
   export const commitAuthor = `sb`;
   
